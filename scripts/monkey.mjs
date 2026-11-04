@@ -11,6 +11,8 @@ const fixtures = readdirSync('tests/fixtures').map(f => `tests/fixtures/${f}`);
 const SIZES = [[1440, 900], [1024, 768], [768, 1024], [390, 844], [360, 740]];
 let failures = 0;
 
+// Protected Vercel previews: send the short-lived login token (from `vercel env run`) as a header. Never printed.
+const auth = process.env.VERCEL_OIDC_TOKEN && /vercel\.app/.test(base) ? { extraHTTPHeaders: { 'x-vercel-trusted-oidc-idp-token': process.env.VERCEL_OIDC_TOKEN } } : {};
 const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
 for (const seed of seeds) {
   let s = seed;
@@ -18,7 +20,7 @@ for (const seed of seeds) {
   const pick = a => a[Math.floor(rnd() * a.length)];
   // Even seeds start on a phone (touch), odd seeds on a laptop.
   const [w0, h0] = seed % 2 === 0 ? [390, 844] : [1280, 800];
-  const ctx = await browser.newContext({ viewport: { width: w0, height: h0 }, isMobile: w0 < 500, hasTouch: w0 < 500 });
+  const ctx = await browser.newContext({ ...auth, viewport: { width: w0, height: h0 }, isMobile: w0 < 500, hasTouch: w0 < 500 });
   const page = await ctx.newPage();
   const problems = [];
   page.on('pageerror', e => problems.push(`page error: ${e.message}`));

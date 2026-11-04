@@ -30,11 +30,13 @@ const shiftObserver = () => {
 const tabs = ['The Okafors', 'Tom', 'Your file', 'Priya', 'Tom', 'The Okafors', 'Priya'];
 const tabSel = name => `.subbar .seg a:text-is("${name}")`;
 
+// Protected Vercel previews: send the short-lived login token (from `vercel env run`) as a header. Never printed.
+const auth = process.env.VERCEL_OIDC_TOKEN && /vercel\.app/.test(base) ? { extraHTTPHeaders: { 'x-vercel-trusted-oidc-idp-token': process.env.VERCEL_OIDC_TOKEN } } : {};
 const browser = await chromium.launch({ executablePath: CHROME, headless: true });
 
 // ── A + B + C: desktop, normal motion, recorded ──
 {
-  const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, recordVideo: { dir: 'docs/videos/tmp', size: { width: 1440, height: 900 } } });
+  const ctx = await browser.newContext({ ...auth, viewport: { width: 1440, height: 900 }, recordVideo: { dir: 'docs/videos/tmp', size: { width: 1440, height: 900 } } });
   await ctx.addInitScript(shiftObserver);
   const page = await ctx.newPage();
   watch(page, 'desktop');
@@ -218,7 +220,7 @@ const browser = await chromium.launch({ executablePath: CHROME, headless: true }
 
 // ── D. phone, normal motion ──
 {
-  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+  const ctx = await browser.newContext({ ...auth, viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
   await ctx.addInitScript(shiftObserver);
   const page = await ctx.newPage();
   watch(page, 'phone');
@@ -255,7 +257,7 @@ const browser = await chromium.launch({ executablePath: CHROME, headless: true }
 
 // ── E. reduced motion ──
 {
-  const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' });
+  const ctx = await browser.newContext({ ...auth, viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   watch(page, 'reduced-motion');
   await page.goto(base + '#/sweep/okafor', { waitUntil: 'networkidle' });
@@ -271,7 +273,7 @@ const browser = await chromium.launch({ executablePath: CHROME, headless: true }
 // ── F. accessibility (axe-core, serious and critical issues) ──
 {
   // The site's security policy blocks injected scripts (good), so the checker's browser is told to ignore it.
-  const ctx = await browser.newContext({ viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce', bypassCSP: true });
+  const ctx = await browser.newContext({ ...auth, viewport: { width: 1280, height: 800 }, reducedMotion: 'reduce', bypassCSP: true });
   const page = await ctx.newPage();
   for (const r of ['/', '/sweep/priya', '/sweep/yours', '/how', '/accuracy', '/docs/memo']) {
     await page.goto(base + '#' + r, { waitUntil: 'networkidle' });
