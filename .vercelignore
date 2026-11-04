@@ -1,0 +1,8 @@
+docs/agent-log.md
+docs/screenshots/
+docs/videos/
+docs/evidence/
+research/
+node_modules/
+dist/
+*.webm
