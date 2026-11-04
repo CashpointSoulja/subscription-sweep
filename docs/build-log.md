@@ -185,3 +185,7 @@ After the fixes (no longer blind): set 2 25/25 subscriptions, 22/22 bills, 14/15
 ## 15. Into Notion (20:44)
 
 Docs went to Notion so they're easy to share. Three things broke on the way and are fixed in `scripts/publish-notion.py`: Composio wanted every block wrapped, uploads needed a file path, and headings like "1. Picking the problem" were silently turned into numbered lists. I rebuilt that page and checked it by reading it back: 14 headings, 7 screenshots, 2 videos, no duplicates.
+
+## 16. Live (4 Nov)
+
+It's live at **https://subscription-sweep.vercel.app**, with the code public at **github.com/CashpointSoulja/subscription-sweep**. Before publishing I checked every file for private details and kept my working notes and the raw review data out. That check caught one: the docs page was loading every Markdown file in the folder, so my private notes would have shipped inside the site's code even though nothing linked to them. Fixed, then I scanned the built site for private strings (none) and re-ran the upload tests against the live site: 7/7.
