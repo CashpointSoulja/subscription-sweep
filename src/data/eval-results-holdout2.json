@@ -1,0 +1,115 @@
+{
+ "runAt": "2026-11-03T20:33:47.939Z",
+ "mode": "rules+ai",
+ "households": [
+  {
+   "id": "holdout2-a",
+   "name": "The Hendersons",
+   "format": "Generic",
+   "txns": 657,
+   "skipped": 0,
+   "subs": {
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "bills": {
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "exact": 24,
+   "matched": 24,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "flags": {
+    "tp": 7,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "stack: Netflix"
+    ],
+    "extra": []
+   },
+   "worthALook": 791.64,
+   "toClaimBack": 0,
+   "subscriptionsAnnual": 1664.1
+  },
+  {
+   "id": "holdout2-b",
+   "name": "Ellie & Jonah",
+   "format": "Generic",
+   "txns": 628,
+   "skipped": 0,
+   "subs": {
+    "tp": 13,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "bills": {
+    "tp": 10,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "exact": 23,
+   "matched": 23,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "flags": {
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "worthALook": 521.47,
+   "toClaimBack": 11.99,
+   "subscriptionsAnnual": 1722.88
+  }
+ ],
+ "overall": {
+  "txns": 1285,
+  "streams": 50,
+  "subscriptions": {
+   "tp": 25,
+   "fp": 0,
+   "fn": 0,
+   "precision": 100,
+   "recall": 100
+  },
+  "bills": {
+   "tp": 22,
+   "fp": 0,
+   "fn": 0,
+   "precision": 100,
+   "recall": 100
+  },
+  "flags": {
+   "tp": 14,
+   "fp": 0,
+   "fn": 1,
+   "precision": 100,
+   "recall": 93.3
+  },
+  "exactPrice": {
+   "ok": 47,
+   "total": 47
+  },
+  "aiLabels": {
+   "ok": 0,
+   "total": 0
+  }
+ }
+}

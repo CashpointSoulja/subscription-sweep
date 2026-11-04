@@ -1,0 +1,15 @@
+
+The Hendersons (Generic, 657 txns, skipped 0)
+  subscriptions  tp 12 fp 0 fn 0
+  bills+fixed    tp 12 fp 0 fn 0
+  flags          tp 7 fp 0 fn 1  missed: stack: Netflix
+  exact price+cadence 24/24 · AI labels 0/0 · worth a look £791.64 · claim back £0
+
+Ellie & Jonah (Generic, 628 txns, skipped 0)
+  subscriptions  tp 13 fp 0 fn 0
+  bills+fixed    tp 10 fp 0 fn 0
+  flags          tp 7 fp 0 fn 0
+  exact price+cadence 23/23 · AI labels 0/0 · worth a look £521.47 · claim back £11.99
+
+OVERALL (rules+ai) subs P 100% R 100% · bills P 100% R 100% · flags P 100% R 93.3% · exact £ 47/47 · AI 0/0
+wrote src/data/eval-results-holdout2.json

@@ -1,0 +1,21 @@
+
+Priya (Monzo, 446 txns, skipped 0)
+  subscriptions  tp 9 fp 0 fn 0
+  bills+fixed    tp 5 fp 0 fn 0
+  flags          tp 4 fp 1 fn 0  extra: unknown: Can't name this one
+  exact price+cadence 14/14 · AI labels 0/1 · worth a look £697.75 · claim back £0
+
+The Okafors (Nationwide-style, 487 txns, skipped 0)
+  subscriptions  tp 10 fp 0 fn 0
+  bills+fixed    tp 10 fp 0 fn 0
+  flags          tp 6 fp 1 fn 0  extra: unknown: Can't name this one
+  exact price+cadence 20/20 · AI labels 0/1 · worth a look £322.76 · claim back £12.99
+
+Tom (Starling, 666 txns, skipped 0)
+  subscriptions  tp 13 fp 0 fn 0
+  bills+fixed    tp 2 fp 0 fn 0
+  flags          tp 4 fp 2 fn 0  extra: unknown: Can't name this one | unknown: Can't name this one
+  exact price+cadence 15/15 · AI labels 0/2 · worth a look £605.64 · claim back £0
+
+OVERALL (rules-only) subs P 100% R 100% · bills P 100% R 100% · flags P 77.8% R 100% · exact £ 49/49 · AI 0/4
+wrote src/data/eval-results-rules-only.json

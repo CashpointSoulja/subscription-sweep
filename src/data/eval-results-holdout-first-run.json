@@ -1,0 +1,148 @@
+{
+ "runAt": "2026-11-03T19:33:00Z",
+ "mode": "blind first run (before fixes)",
+ "households": [
+  {
+   "id": "holdout-a",
+   "name": "Hannah & Dev",
+   "format": "Generic",
+   "txns": 696,
+   "subs": {
+    "tp": 15,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "English Heritage \u00a394",
+     "1Password \u00a327.12"
+    ],
+    "extra": [
+     "Savings So \u00a3300",
+     "C Adeyemi \u00a36"
+    ]
+   },
+   "bills": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "flags": {
+    "tp": 7,
+    "fp": 6,
+    "fn": 5,
+    "missed": [
+     "duplicate: Three",
+     "price-rise: Liverpool Victoria",
+     "renewal-soon: English Heritage",
+     "double-charge: Disney+",
+     "unknown: VLXSERV"
+    ],
+    "extra": [
+     "double-charge: Disney+ charged you twice",
+     "unknown \u00d73",
+     "price-rise: PureGym (part-month first payment)",
+     "price-rise: LV="
+    ]
+   },
+   "exact": 24,
+   "matched": 24,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "worthALook": 4723.2
+  },
+  {
+   "id": "holdout-b",
+   "name": "The Hughes family",
+   "format": "Generic",
+   "txns": 697,
+   "subs": {
+    "tp": 13,
+    "fp": 2,
+    "fn": 5,
+    "missed": [
+     "Uber One",
+     "Tesco Clubcard Plus",
+     "The Week Junior",
+     "SimplyCook",
+     "Norton 360"
+    ],
+    "extra": [
+     "Nationwide BS (mortgage)",
+     "DVLA (vehicle tax)"
+    ]
+   },
+   "bills": {
+    "tp": 8,
+    "fp": 0,
+    "fn": 4,
+    "missed": [
+     "Nationwide mortgage",
+     "DVLA vehicle tax",
+     "EDF Energy",
+     "RAC"
+    ],
+    "extra": []
+   },
+   "flags": {
+    "tp": 3,
+    "fp": 3,
+    "fn": 6,
+    "missed": [
+     "duplicate: Deliveroo Plus",
+     "price-rise: The Week Junior",
+     "trial-converted: SimplyCook",
+     "renewal-soon: Norton 360",
+     "double-charge: Spotify",
+     "unknown: FMX SVCS"
+    ],
+    "extra": [
+     "double-charge: Spotify charged you twice",
+     "unknown \u00d72"
+    ]
+   },
+   "exact": 23,
+   "matched": 23,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "worthALook": 953.76
+  }
+ ],
+ "overall": {
+  "txns": 1393,
+  "streams": 59,
+  "subscriptions": {
+   "tp": 28,
+   "fp": 4,
+   "fn": 7,
+   "precision": 87.5,
+   "recall": 80.0
+  },
+  "bills": {
+   "tp": 17,
+   "fp": 0,
+   "fn": 4,
+   "precision": 100.0,
+   "recall": 81.0
+  },
+  "flags": {
+   "tp": 10,
+   "fp": 9,
+   "fn": 11,
+   "precision": 52.6,
+   "recall": 47.6
+  },
+  "exactPrice": {
+   "ok": 47,
+   "total": 47
+  },
+  "aiLabels": {
+   "ok": 0,
+   "total": 0
+  }
+ }
+}

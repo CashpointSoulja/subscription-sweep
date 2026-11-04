@@ -1,0 +1,42 @@
+{
+ "ROBLOX CORPORATION": {
+  "name": "Roblox",
+  "category": "gaming",
+  "confidence": 0.95,
+  "descriptor": "ROBLOX CORPORATION",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:10:38.977Z"
+ },
+ "THE BREAD CLUB": {
+  "name": "The Bread Club",
+  "category": "food-box",
+  "confidence": 0.7,
+  "descriptor": "SQ *THE BREAD CLUB",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:10:38.977Z"
+ },
+ "KLX MEMBER SERVICES": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "descriptor": "KLX*MEMBER SERVICES 0203",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:10:38.977Z"
+ },
+ "CRUNCHYROLL": {
+  "name": "Crunchyroll",
+  "category": "video",
+  "confidence": 0.97,
+  "descriptor": "CRUNCHYROLL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:10:38.977Z"
+ },
+ "PATREON MEMBERSHIP": {
+  "name": "Patreon",
+  "category": "creator",
+  "confidence": 0.95,
+  "descriptor": "PATREON* MEMBERSHIP",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:10:38.977Z"
+ }
+}

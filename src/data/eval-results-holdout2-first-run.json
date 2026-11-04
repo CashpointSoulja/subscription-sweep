@@ -1,0 +1,146 @@
+{
+ "runAt": "2026-11-03T20:28:00.332Z",
+ "mode": "rules+ai",
+ "households": [
+  {
+   "id": "holdout2-a",
+   "name": "The Hendersons",
+   "format": "Generic",
+   "txns": 657,
+   "skipped": 0,
+   "subs": {
+    "tp": 10,
+    "fp": 4,
+    "fn": 2,
+    "missed": [
+     "Spotify £16.99",
+     "Adobe £238.42"
+    ],
+    "extra": [
+     "Black Horse £289.47",
+     "Spotify £16.99",
+     "National Trust £19.3",
+     "Non Sterling Transaction £0.2"
+    ]
+   },
+   "bills": {
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "exact": 22,
+   "matched": 22,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "flags": {
+    "tp": 6,
+    "fp": 3,
+    "fn": 2,
+    "missed": [
+     "stack: Netflix",
+     "renewal-soon: RAC breakdown"
+    ],
+    "extra": [
+     "double-charge: Spotify charged you twice",
+     "price-rise: Spotify went up £5.00 a month",
+     "unknown: Can't name this one"
+    ]
+   },
+   "worthALook": 854.04,
+   "toClaimBack": 16.99,
+   "subscriptionsAnnual": 4921.02
+  },
+  {
+   "id": "holdout2-b",
+   "name": "Ellie & Jonah",
+   "format": "Generic",
+   "txns": 628,
+   "skipped": 0,
+   "subs": {
+    "tp": 11,
+    "fp": 4,
+    "fn": 2,
+    "missed": [
+     "Perplexity £14.76",
+     "TPR subscription £6"
+    ],
+    "extra": [
+     "Klarna £42",
+     "To Toob Ref £25",
+     "Santander £40",
+     "Urban Jungle £9.12"
+    ]
+   },
+   "bills": {
+    "tp": 7,
+    "fp": 0,
+    "fn": 3,
+    "missed": [
+     "Rent £1720",
+     "Toob £25",
+     "Urban Jungle £9.12"
+    ],
+    "extra": []
+   },
+   "exact": 20,
+   "matched": 20,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "flags": {
+    "tp": 5,
+    "fp": 2,
+    "fn": 2,
+    "missed": [
+     "duplicate: Perplexity",
+     "unknown: TPR subscription"
+    ],
+    "extra": [
+     "unknown: Can't name this one",
+     "unknown: Can't name this one"
+    ]
+   },
+   "worthALook": 681.79,
+   "toClaimBack": 11.99,
+   "subscriptionsAnnual": 2547.2
+  }
+ ],
+ "overall": {
+  "txns": 1285,
+  "streams": 50,
+  "subscriptions": {
+   "tp": 21,
+   "fp": 8,
+   "fn": 4,
+   "precision": 72.4,
+   "recall": 84
+  },
+  "bills": {
+   "tp": 19,
+   "fp": 0,
+   "fn": 3,
+   "precision": 100,
+   "recall": 86.4
+  },
+  "flags": {
+   "tp": 11,
+   "fp": 5,
+   "fn": 4,
+   "precision": 68.8,
+   "recall": 73.3
+  },
+  "exactPrice": {
+   "ok": 42,
+   "total": 42
+  },
+  "aiLabels": {
+   "ok": 0,
+   "total": 0
+  }
+ }
+}

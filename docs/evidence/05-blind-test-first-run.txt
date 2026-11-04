@@ -1,0 +1,15 @@
+
+Hannah & Dev (Generic, 696 txns, skipped 0)
+  subscriptions  tp 15 fp 2 fn 2  missed: English Heritage £94, 1Password £27.12  extra: Savings So £300, C Adeyemi £6
+  bills+fixed    tp 9 fp 0 fn 0
+  flags          tp 7 fp 6 fn 5  missed: duplicate: Three | price-rise: Liverpool Victoria | renewal-soon: English Heritage | double-charge: Disney+ | unknown: VLXSERV  extra: double-charge: Disney+ charged you twice | unknown: Can't name this one | unknown: Can't name this one | price-rise: PureGym went up £6.67 a month | unknown: Can't name this one | price-rise: LV= went up £1.47 a month
+  exact price+cadence 24/24 · AI labels 0/0 · worth a look £4723.2 · claim back £9.99
+
+The Hughes family (Generic, 697 txns, skipped 0)
+  subscriptions  tp 13 fp 2 fn 5  missed: Uber One £5.99, Tesco Clubcard Plus £7.99, The Week Junior £47.99, SimplyCook £12.99, Norton 360 £84.99  extra: Nationwide Building Society £987.41, DVLA £16.63
+  bills+fixed    tp 8 fp 0 fn 4  missed: Nationwide mortgage £987.41, DVLA vehicle tax £16.63, EDF Energy £112.54, RAC £119
+  flags          tp 3 fp 3 fn 6  missed: duplicate: Deliveroo Plus | price-rise: The Week Junior | trial-converted: SimplyCook | renewal-soon: Norton 360 | double-charge: Spotify | unknown: FMX SVCS  extra: double-charge: Spotify charged you twice | unknown: Can't name this one | unknown: Can't name this one
+  exact price+cadence 23/23 · AI labels 0/0 · worth a look £953.76 · claim back £19.99
+
+OVERALL (rules+ai) subs P 87.5% R 80% · bills P 100% R 81% · flags P 52.6% R 47.6% · exact £ 47/47 · AI 0/0
+wrote src/data/eval-results-holdout.json

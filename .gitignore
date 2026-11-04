@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.webm
+docs/videos/tmp/
+.DS_Store
+# private: agent working notes (names, account ids), raw third-party reviews
+docs/agent-log.md
+research/reviews/trustpilot.json
+research/reviews/analysis/
+# local tooling
+.vercel/

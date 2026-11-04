@@ -1,0 +1,15 @@
+
+Hannah & Dev (Generic, 696 txns, skipped 0)
+  subscriptions  tp 17 fp 0 fn 0
+  bills+fixed    tp 9 fp 0 fn 0
+  flags          tp 11 fp 0 fn 1  missed: duplicate: Three
+  exact price+cadence 26/26 · AI labels 0/0 · worth a look £825.16 · claim back £9.99
+
+The Hughes family (Generic, 697 txns, skipped 0)
+  subscriptions  tp 18 fp 0 fn 0
+  bills+fixed    tp 12 fp 0 fn 0
+  flags          tp 9 fp 0 fn 0
+  exact price+cadence 30/30 · AI labels 0/0 · worth a look £700.51 · claim back £19.99
+
+OVERALL (rules+ai) subs P 100% R 100% · bills P 100% R 100% · flags P 100% R 95.2% · exact £ 56/56 · AI 0/0
+wrote src/data/eval-results-holdout.json

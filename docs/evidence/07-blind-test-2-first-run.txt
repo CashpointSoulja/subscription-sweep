@@ -1,0 +1,15 @@
+
+The Hendersons (Generic, 657 txns, skipped 0)
+  subscriptions  tp 10 fp 4 fn 2  missed: Spotify £16.99, Adobe £238.42  extra: Black Horse £289.47, Spotify £16.99, National Trust £19.3, Non Sterling Transaction £0.2
+  bills+fixed    tp 12 fp 0 fn 0
+  flags          tp 6 fp 3 fn 2  missed: stack: Netflix | renewal-soon: RAC breakdown  extra: double-charge: Spotify charged you twice | price-rise: Spotify went up £5.00 a month | unknown: Can't name this one
+  exact price+cadence 22/22 · AI labels 0/0 · worth a look £854.04 · claim back £16.99
+
+Ellie & Jonah (Generic, 628 txns, skipped 0)
+  subscriptions  tp 11 fp 4 fn 2  missed: Perplexity £14.76, TPR subscription £6  extra: Klarna £42, To Toob Ref £25, Santander £40, Urban Jungle £9.12
+  bills+fixed    tp 7 fp 0 fn 3  missed: Rent £1720, Toob £25, Urban Jungle £9.12
+  flags          tp 5 fp 2 fn 2  missed: duplicate: Perplexity | unknown: TPR subscription  extra: unknown: Can't name this one | unknown: Can't name this one
+  exact price+cadence 20/20 · AI labels 0/0 · worth a look £681.79 · claim back £11.99
+
+OVERALL (rules+ai) subs P 72.4% R 84% · bills P 100% R 86.4% · flags P 68.8% R 73.3% · exact £ 42/42 · AI 0/0
+wrote src/data/eval-results-holdout2.json

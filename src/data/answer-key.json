@@ -1,0 +1,526 @@
+[
+ {
+  "id": "priya",
+  "name": "Priya",
+  "firstName": "Priya",
+  "blurb": "Renting a one-bed in Leeds. Busy job, signs up to things on her phone and forgets.",
+  "format": "monzo",
+  "periodEnd": "2026-10-31",
+  "txns": 446,
+  "truth": [
+   {
+    "desc": "STO M OKONJO RENT",
+    "name": "Rent",
+    "kind": "housing",
+    "cadence": "monthly",
+    "amount": 850,
+    "active": true
+   },
+   {
+    "desc": "LEEDS CITY COUNCIL CTAX",
+    "name": "Council tax",
+    "kind": "housing",
+    "cadence": "monthly",
+    "amount": 142,
+    "active": true
+   },
+   {
+    "desc": "OCTOPUS ENERGY DD",
+    "name": "Octopus Energy",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 96,
+    "active": true
+   },
+   {
+    "desc": "HYPEROPTIC LTD",
+    "name": "Hyperoptic",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 30,
+    "active": true
+   },
+   {
+    "desc": "VODAFONE LTD",
+    "name": "Vodafone",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 18,
+    "active": true
+   },
+   {
+    "desc": "NETFLIX.COM 866-579-7172",
+    "name": "Netflix",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 12.99,
+    "previous": 10.99,
+    "active": true
+   },
+   {
+    "desc": "SPOTIFY P2A4F8C1",
+    "name": "Spotify",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 11.99,
+    "active": true
+   },
+   {
+    "desc": "APPLE.COM/BILL",
+    "name": "Apple",
+    "kind": "subscription",
+    "category": "music",
+    "cadence": "monthly",
+    "amount": 10.99,
+    "active": true
+   },
+   {
+    "desc": "APPLE.COM/BILL",
+    "name": "Apple",
+    "kind": "subscription",
+    "category": "cloud",
+    "cadence": "monthly",
+    "amount": 2.99,
+    "active": true
+   },
+   {
+    "desc": "PAYPAL *DISNEYPLUS 35314369001",
+    "name": "Disney+",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 7.99,
+    "active": true
+   },
+   {
+    "desc": "PUREGYM LTD",
+    "name": "PureGym",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 24.99,
+    "active": true
+   },
+   {
+    "desc": "HEADSPACE.COM",
+    "name": "Headspace",
+    "kind": "subscription",
+    "cadence": "yearly",
+    "amount": 49.99,
+    "active": true
+   },
+   {
+    "desc": "HINGE",
+    "name": "Hinge",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 24.99,
+    "active": true
+   },
+   {
+    "desc": "SQ *THE BREAD CLUB",
+    "name": "The Bread Club",
+    "kind": "subscription",
+    "category": "food-box",
+    "ai": true,
+    "cadence": "monthly",
+    "amount": 16,
+    "active": true
+   }
+  ],
+  "expectFlags": [
+   {
+    "type": "price-rise",
+    "name": "Netflix"
+   },
+   {
+    "type": "duplicate",
+    "name": "Apple",
+    "amount": 10.99
+   },
+   {
+    "type": "renewal-soon",
+    "name": "Headspace"
+   },
+   {
+    "type": "trial-converted",
+    "name": "Hinge"
+   }
+  ],
+  "mustNotBeSubscription": [
+   "Groceries",
+   "Eating out",
+   "Transport",
+   "Shopping",
+   "NOW (active)"
+  ]
+ },
+ {
+  "id": "okafor",
+  "name": "The Okafors",
+  "firstName": "Grace",
+  "blurb": "Family of four in Croydon. Two adults, two kids, a lot of logins.",
+  "format": "nationwide",
+  "periodEnd": "2026-10-31",
+  "txns": 487,
+  "truth": [
+   {
+    "desc": "NATIONWIDE MORTGAGE",
+    "name": "Mortgage",
+    "kind": "housing",
+    "cadence": "monthly",
+    "amount": 1240,
+    "active": true
+   },
+   {
+    "desc": "LB CROYDON CTAX",
+    "name": "Council tax",
+    "kind": "housing",
+    "cadence": "monthly",
+    "amount": 198,
+    "active": true
+   },
+   {
+    "desc": "TV LICENCE MBP",
+    "name": "TV Licence",
+    "kind": "housing",
+    "cadence": "monthly",
+    "amount": 14.25,
+    "active": true
+   },
+   {
+    "desc": "THAMES WATER",
+    "name": "Water",
+    "kind": "housing",
+    "cadence": "monthly",
+    "amount": 38,
+    "active": true
+   },
+   {
+    "desc": "BRITISH GAS",
+    "name": "British Gas",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 168,
+    "active": true
+   },
+   {
+    "desc": "SKY DIGITAL",
+    "name": "Sky",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 74,
+    "previous": 68,
+    "active": true
+   },
+   {
+    "desc": "EE LIMITED",
+    "name": "EE",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 32,
+    "active": true
+   },
+   {
+    "desc": "EE LIMITED",
+    "name": "EE",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 22,
+    "active": true
+   },
+   {
+    "desc": "ADMIRAL INSURANCE",
+    "name": "Admiral",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 61,
+    "active": true
+   },
+   {
+    "desc": "AVIVA HOME INS",
+    "name": "Aviva",
+    "kind": "bill",
+    "cadence": "yearly",
+    "amount": 312,
+    "active": true
+   },
+   {
+    "desc": "NETFLIX.COM",
+    "name": "Netflix",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 18.99,
+    "active": true
+   },
+   {
+    "desc": "NETFLIX.COM",
+    "name": "Netflix",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 5.99,
+    "active": true
+   },
+   {
+    "desc": "DISNEY PLUS",
+    "name": "Disney+",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 12.99,
+    "active": true
+   },
+   {
+    "desc": "AMAZON PRIME*2B1QX",
+    "name": "Amazon Prime",
+    "kind": "subscription",
+    "cadence": "yearly",
+    "amount": 95,
+    "active": true
+   },
+   {
+    "desc": "PARAMOUNTPLUS.COM",
+    "name": "Paramount+",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 6.99,
+    "active": true
+   },
+   {
+    "desc": "GOOGLE *YOUTUBEPREMIUM",
+    "name": "YouTube Premium",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 12.99,
+    "active": true
+   },
+   {
+    "desc": "SPOTIFY",
+    "name": "Spotify",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 19.99,
+    "active": true
+   },
+   {
+    "desc": "MICROSOFT*XBOX",
+    "name": "Xbox Game Pass",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 12.99,
+    "previous": 10.99,
+    "active": true
+   },
+   {
+    "desc": "ROBLOX CORPORATION",
+    "name": "Roblox",
+    "kind": "subscription",
+    "category": "gaming",
+    "ai": true,
+    "cadence": "monthly",
+    "amount": 4.99,
+    "active": true
+   },
+   {
+    "desc": "GOUSTO",
+    "name": "Gousto",
+    "kind": "subscription",
+    "cadence": "weekly",
+    "amount": 38.99,
+    "active": true
+   }
+  ],
+  "expectFlags": [
+   {
+    "type": "duplicate",
+    "name": "Netflix",
+    "amount": 5.99
+   },
+   {
+    "type": "double-charge",
+    "name": "Disney+"
+   },
+   {
+    "type": "renewal-soon",
+    "name": "Amazon Prime"
+   },
+   {
+    "type": "stack",
+    "name": "Netflix"
+   },
+   {
+    "type": "price-rise",
+    "name": "Xbox Game Pass"
+   },
+   {
+    "type": "price-rise",
+    "name": "Sky"
+   }
+  ],
+  "mustNotBeSubscription": [
+   "Groceries",
+   "Transport",
+   "Shopping",
+   "Eating out",
+   "BritBox (active)"
+  ]
+ },
+ {
+  "id": "tom",
+  "name": "Tom",
+  "firstName": "Tom",
+  "blurb": "Flatshare in Manchester. Tries every new app, splits bills with his flatmate.",
+  "format": "starling",
+  "periodEnd": "2026-10-31",
+  "txns": 666,
+  "truth": [
+   {
+    "desc": "STO S WARD RENT",
+    "name": "Rent",
+    "kind": "housing",
+    "cadence": "monthly",
+    "amount": 650,
+    "active": true
+   },
+   {
+    "desc": "HUTCHISON 3G UK",
+    "name": "Three",
+    "kind": "bill",
+    "cadence": "monthly",
+    "amount": 12,
+    "active": true
+   },
+   {
+    "desc": "SPOTIFY",
+    "name": "Spotify",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 11.99,
+    "active": true
+   },
+   {
+    "desc": "OPENAI *CHATGPT SUBSCR",
+    "name": "ChatGPT Plus",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 20,
+    "active": true
+   },
+   {
+    "desc": "ANTHROPIC CLAUDE.AI SUBSCRIPTION",
+    "name": "Claude Pro",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 18,
+    "active": true
+   },
+   {
+    "desc": "PLAYSTATION NETWORK",
+    "name": "PlayStation Plus",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 10.99,
+    "active": true
+   },
+   {
+    "desc": "PUREGYM LTD",
+    "name": "PureGym",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 27.99,
+    "active": true
+   },
+   {
+    "desc": "UBER ONE MEMBERSHIP",
+    "name": "Uber One",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 5.99,
+    "active": true
+   },
+   {
+    "desc": "DELIVEROO PLUS",
+    "name": "Deliveroo Plus",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 3.49,
+    "active": true
+   },
+   {
+    "desc": "DUOLINGO",
+    "name": "Duolingo",
+    "kind": "subscription",
+    "cadence": "yearly",
+    "amount": 79.99,
+    "active": true
+   },
+   {
+    "desc": "AUDIBLE UK",
+    "name": "Audible",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 7.99,
+    "active": true
+   },
+   {
+    "desc": "STRAVA",
+    "name": "Strava",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 8.99,
+    "active": true
+   },
+   {
+    "desc": "PATREON* MEMBERSHIP",
+    "name": "Patreon",
+    "kind": "subscription",
+    "category": "creator",
+    "ai": true,
+    "cadence": "monthly",
+    "amount": 4,
+    "active": true
+   },
+   {
+    "desc": "CRUNCHYROLL",
+    "name": "Crunchyroll",
+    "kind": "subscription",
+    "category": "video",
+    "ai": true,
+    "cadence": "monthly",
+    "amount": 6.49,
+    "active": true
+   },
+   {
+    "desc": "KLX*MEMBER SERVICES 0203",
+    "name": "KLX member services",
+    "kind": "subscription",
+    "cadence": "monthly",
+    "amount": 9.5,
+    "active": true
+   }
+  ],
+  "expectFlags": [
+   {
+    "type": "duplicate",
+    "name": "Claude Pro"
+   },
+   {
+    "type": "duplicate",
+    "name": "Deliveroo Plus"
+   },
+   {
+    "type": "trial-converted",
+    "name": "Strava"
+   },
+   {
+    "type": "unknown",
+    "name": "KLX member services"
+   }
+  ],
+  "mustNotBeSubscription": [
+   "Groceries",
+   "Eating out",
+   "Transport",
+   "J Patel Bills",
+   "Bee Network Bus",
+   "The Gym Group (active)"
+  ]
+ }
+]

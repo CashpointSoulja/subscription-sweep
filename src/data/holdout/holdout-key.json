@@ -1,0 +1,696 @@
+[
+ {
+  "id": "holdout-a",
+  "name": "Hannah & Dev",
+  "periodEnd": "2026-10-31",
+  "truth": [
+   {
+    "desc": "SO MR D PATEL RENT FLAT 4",
+    "name": "Rent",
+    "kind": "housing",
+    "category": "rent",
+    "cadence": "monthly",
+    "amount": 1650.0,
+    "active": true
+   },
+   {
+    "desc": "LB LAMBETH COUNCIL TAX",
+    "name": "Council tax",
+    "kind": "housing",
+    "category": "council-tax",
+    "cadence": "monthly",
+    "amount": 171.98,
+    "previous": 163.82,
+    "active": true
+   },
+   {
+    "desc": "THAMES WATER",
+    "name": "Thames Water",
+    "kind": "housing",
+    "category": "water",
+    "cadence": "monthly",
+    "amount": 42.5,
+    "previous": 39.0,
+    "active": true
+   },
+   {
+    "desc": "TV LICENCE MBP",
+    "name": "TV Licence",
+    "kind": "housing",
+    "category": "tv-licence",
+    "cadence": "monthly",
+    "amount": 14.54,
+    "active": true
+   },
+   {
+    "desc": "OCTOPUS ENERGY",
+    "name": "Octopus Energy",
+    "kind": "bill",
+    "category": "energy",
+    "cadence": "monthly",
+    "amount": 86.0,
+    "previous": 98.0,
+    "active": true
+   },
+   {
+    "desc": "VIRGIN MEDIA PYMTS",
+    "name": "Virgin Media",
+    "kind": "bill",
+    "category": "broadband",
+    "cadence": "monthly",
+    "amount": 58.0,
+    "previous": 54.0,
+    "active": true
+   },
+   {
+    "desc": "HUTCHISON 3G UK LTD",
+    "name": "Three",
+    "kind": "bill",
+    "category": "mobile",
+    "cadence": "monthly",
+    "amount": 16.0,
+    "active": true
+   },
+   {
+    "desc": "HUTCHISON 3G UK LTD",
+    "name": "Three",
+    "kind": "bill",
+    "category": "mobile",
+    "cadence": "monthly",
+    "amount": 38.0,
+    "active": true
+   },
+   {
+    "desc": "LIVERPOOL VICTORIA INS",
+    "name": "Liverpool Victoria",
+    "kind": "bill",
+    "category": "insurance",
+    "cadence": "monthly",
+    "amount": 10.84,
+    "previous": 9.37,
+    "active": true
+   },
+   {
+    "desc": "PAYPAL *NETFLIX",
+    "name": "Netflix",
+    "kind": "subscription",
+    "category": "video",
+    "cadence": "monthly",
+    "amount": 12.99,
+    "active": true
+   },
+   {
+    "desc": "DISNEY PLUS",
+    "name": "Disney+",
+    "kind": "subscription",
+    "category": "video",
+    "cadence": "monthly",
+    "amount": 9.99,
+    "active": true
+   },
+   {
+    "desc": "NOW TV LTD",
+    "name": "NOW",
+    "kind": "subscription",
+    "category": "video",
+    "cadence": "monthly",
+    "amount": 9.99,
+    "active": true
+   },
+   {
+    "desc": "Spotify PP4TSUXZV2",
+    "name": "Spotify",
+    "kind": "subscription",
+    "category": "music",
+    "cadence": "monthly",
+    "amount": 12.99,
+    "previous": 11.99,
+    "active": true
+   },
+   {
+    "desc": "APPLE.COM/BILL",
+    "name": "Apple",
+    "kind": "subscription",
+    "category": "music",
+    "cadence": "monthly",
+    "amount": 10.99,
+    "active": true
+   },
+   {
+    "desc": "APPLE.COM/BILL",
+    "name": "Apple",
+    "kind": "subscription",
+    "category": "cloud",
+    "cadence": "monthly",
+    "amount": 2.99,
+    "active": true
+   },
+   {
+    "desc": "APPLE.COM/BILL",
+    "name": "Apple",
+    "kind": "subscription",
+    "category": "video",
+    "cadence": "monthly",
+    "amount": 8.99,
+    "active": false
+   },
+   {
+    "desc": "OPENAI *CHATGPT SUBSCR",
+    "name": "ChatGPT Plus",
+    "kind": "subscription",
+    "category": "ai",
+    "cadence": "monthly",
+    "amount": 20.0,
+    "active": true
+   },
+   {
+    "desc": "CLAUDE.AI SUBSCRIPTION",
+    "name": "Claude Pro",
+    "kind": "subscription",
+    "category": "ai",
+    "cadence": "monthly",
+    "amount": 18.0,
+    "active": true
+   },
+   {
+    "desc": "Audible UK adbl.co/pymt",
+    "name": "Audible",
+    "kind": "subscription",
+    "category": "audiobooks",
+    "cadence": "monthly",
+    "amount": 8.99,
+    "active": true
+   },
+   {
+    "desc": "HELLOFRESH",
+    "name": "HelloFresh",
+    "kind": "subscription",
+    "category": "food-box",
+    "cadence": "weekly",
+    "amount": 45.99,
+    "active": true
+   },
+   {
+    "desc": "STRONGHOLD GYM BRIXTON",
+    "name": "Stronghold Gym",
+    "kind": "subscription",
+    "category": "gym",
+    "cadence": "monthly",
+    "amount": 45.0,
+    "active": false
+   },
+   {
+    "desc": "PUREGYM",
+    "name": "PureGym",
+    "kind": "subscription",
+    "category": "gym",
+    "cadence": "monthly",
+    "amount": 24.99,
+    "active": true
+   },
+   {
+    "desc": "THE ECONOMIST NEWSPAPER",
+    "name": "The Economist",
+    "kind": "subscription",
+    "category": "news",
+    "cadence": "quarterly",
+    "amount": 51.0,
+    "active": true
+   },
+   {
+    "desc": "ENGLISH HERITAGE",
+    "name": "English Heritage",
+    "kind": "subscription",
+    "category": "membership",
+    "cadence": "yearly",
+    "amount": 94.0,
+    "active": true
+   },
+   {
+    "desc": "1PASSWORD.COM",
+    "name": "1Password",
+    "kind": "subscription",
+    "category": "software",
+    "cadence": "yearly",
+    "amount": 27.12,
+    "active": true
+   },
+   {
+    "desc": "SHELTER",
+    "name": "Shelter",
+    "kind": "subscription",
+    "category": "charity",
+    "cadence": "monthly",
+    "amount": 12.0,
+    "active": true
+   },
+   {
+    "desc": "PAYPAL *VLXSERV",
+    "name": "VLXSERV",
+    "kind": "subscription",
+    "category": "unknown",
+    "cadence": "monthly",
+    "amount": 6.49,
+    "active": true
+   },
+   {
+    "desc": "PRET A MANGER CLUB",
+    "name": "Club Pret",
+    "kind": "subscription",
+    "category": "food-drink",
+    "cadence": "monthly",
+    "amount": 5.0,
+    "active": true
+   }
+  ],
+  "expectFlags": [
+   {
+    "type": "duplicate",
+    "name": "Apple",
+    "amount": 10.99
+   },
+   {
+    "type": "duplicate",
+    "name": "Claude Pro",
+    "amount": 18.0
+   },
+   {
+    "type": "duplicate",
+    "name": "Three",
+    "amount": 16.0
+   },
+   {
+    "type": "price-rise",
+    "name": "Spotify",
+    "amount": 12.99
+   },
+   {
+    "type": "price-rise",
+    "name": "Virgin Media",
+    "amount": 58.0
+   },
+   {
+    "type": "price-rise",
+    "name": "Liverpool Victoria",
+    "amount": 10.84
+   },
+   {
+    "type": "trial-converted",
+    "name": "Audible",
+    "amount": 8.99
+   },
+   {
+    "type": "new",
+    "name": "Claude Pro",
+    "amount": 18.0
+   },
+   {
+    "type": "renewal-soon",
+    "name": "English Heritage",
+    "amount": 94.0
+   },
+   {
+    "type": "double-charge",
+    "name": "Disney+",
+    "amount": 9.99
+   },
+   {
+    "type": "stack",
+    "name": "Netflix"
+   },
+   {
+    "type": "unknown",
+    "name": "VLXSERV",
+    "amount": 6.49
+   }
+  ],
+  "mustNotBeSubscription": [
+   "Groceries",
+   "Eating out",
+   "Transport",
+   "Shopping",
+   "Costa Coffee",
+   "TfL",
+   "C Adeyemi",
+   "Savings transfer",
+   "Klarna",
+   "Paramount+",
+   "Non-sterling transaction fee",
+   "Stronghold Gym (active)",
+   "Apple TV+ (active)"
+  ]
+ },
+ {
+  "id": "holdout-b",
+  "name": "The Hughes family",
+  "periodEnd": "2026-10-31",
+  "truth": [
+   {
+    "desc": "NATIONWIDE BS",
+    "name": "Nationwide mortgage",
+    "kind": "housing",
+    "category": "mortgage",
+    "cadence": "monthly",
+    "amount": 987.41,
+    "active": true
+   },
+   {
+    "desc": "LEEDS CITY COUNCIL",
+    "name": "Council tax",
+    "kind": "housing",
+    "category": "council-tax",
+    "cadence": "monthly",
+    "amount": 185.2,
+    "previous": 176.4,
+    "active": true
+   },
+   {
+    "desc": "YORKSHIRE WATER",
+    "name": "Yorkshire Water",
+    "kind": "housing",
+    "category": "water",
+    "cadence": "monthly",
+    "amount": 47.0,
+    "previous": 44.0,
+    "active": true
+   },
+   {
+    "desc": "TV LICENSING.CO.UK",
+    "name": "TV Licence",
+    "kind": "housing",
+    "category": "tv-licence",
+    "cadence": "yearly",
+    "amount": 174.5,
+    "active": true
+   },
+   {
+    "desc": "DVLA-YD19KXR",
+    "name": "DVLA vehicle tax",
+    "kind": "housing",
+    "category": "vehicle-tax",
+    "cadence": "monthly",
+    "amount": 16.63,
+    "active": true
+   },
+   {
+    "desc": "EDF ENERGY",
+    "name": "EDF Energy",
+    "kind": "bill",
+    "category": "energy",
+    "cadence": "monthly",
+    "amount": 112.54,
+    "active": true
+   },
+   {
+    "desc": "SKY DIGITAL",
+    "name": "Sky",
+    "kind": "bill",
+    "category": "tv-broadband",
+    "cadence": "monthly",
+    "amount": 78.5,
+    "previous": 73.0,
+    "active": true
+   },
+   {
+    "desc": "TESCO MOBILE",
+    "name": "Tesco Mobile",
+    "kind": "bill",
+    "category": "mobile",
+    "cadence": "monthly",
+    "amount": 18.0,
+    "active": true
+   },
+   {
+    "desc": "ADMIRAL INSURANCE",
+    "name": "Admiral",
+    "kind": "bill",
+    "category": "insurance",
+    "cadence": "monthly",
+    "amount": 58.21,
+    "active": true
+   },
+   {
+    "desc": "DIRECT LINE INS",
+    "name": "Direct Line",
+    "kind": "bill",
+    "category": "insurance",
+    "cadence": "monthly",
+    "amount": 24.6,
+    "active": true
+   },
+   {
+    "desc": "RAC MOTORING SERVICES",
+    "name": "RAC",
+    "kind": "bill",
+    "category": "breakdown",
+    "cadence": "yearly",
+    "amount": 119.0,
+    "active": true
+   },
+   {
+    "desc": "BRITISH GAS SERVICES",
+    "name": "British Gas HomeCare",
+    "kind": "bill",
+    "category": "boiler-cover",
+    "cadence": "monthly",
+    "amount": 19.5,
+    "active": true
+   },
+   {
+    "desc": "DISNEY PLUS",
+    "name": "Disney+",
+    "kind": "subscription",
+    "category": "video",
+    "cadence": "monthly",
+    "amount": 4.99,
+    "active": true
+   },
+   {
+    "desc": "AMAZON PRIME*NGE74EEE7",
+    "name": "Amazon Prime",
+    "kind": "subscription",
+    "category": "video",
+    "cadence": "monthly",
+    "amount": 8.99,
+    "active": false
+   },
+   {
+    "desc": "PAYPAL *SPOTIFY",
+    "name": "Spotify",
+    "kind": "subscription",
+    "category": "music",
+    "cadence": "monthly",
+    "amount": 19.99,
+    "active": true
+   },
+   {
+    "desc": "GOOGLE *Google One",
+    "name": "Google One",
+    "kind": "subscription",
+    "category": "cloud",
+    "cadence": "monthly",
+    "amount": 1.99,
+    "active": true
+   },
+   {
+    "desc": "APPLE.COM/BILL",
+    "name": "Apple",
+    "kind": "subscription",
+    "category": "cloud",
+    "cadence": "monthly",
+    "amount": 2.99,
+    "active": true
+   },
+   {
+    "desc": "GOOGLE *Roblox Corporatio",
+    "name": "Roblox",
+    "kind": "subscription",
+    "category": "gaming",
+    "cadence": "monthly",
+    "amount": 4.99,
+    "active": true
+   },
+   {
+    "desc": "DELIVEROO PLUS",
+    "name": "Deliveroo Plus",
+    "kind": "subscription",
+    "category": "food-delivery",
+    "cadence": "monthly",
+    "amount": 3.49,
+    "active": true
+   },
+   {
+    "desc": "UBER *ONE",
+    "name": "Uber One",
+    "kind": "subscription",
+    "category": "food-delivery",
+    "cadence": "monthly",
+    "amount": 5.99,
+    "active": true
+   },
+   {
+    "desc": "TESCO CLUBCARD PLUS",
+    "name": "Tesco Clubcard Plus",
+    "kind": "subscription",
+    "category": "membership",
+    "cadence": "monthly",
+    "amount": 7.99,
+    "active": true
+   },
+   {
+    "desc": "NATIONAL TRUST",
+    "name": "National Trust",
+    "kind": "subscription",
+    "category": "membership",
+    "cadence": "monthly",
+    "amount": 14.13,
+    "active": true
+   },
+   {
+    "desc": "FUTURE PUBLISHING LTD",
+    "name": "The Week Junior",
+    "kind": "subscription",
+    "category": "magazine",
+    "cadence": "quarterly",
+    "amount": 47.99,
+    "previous": 43.99,
+    "active": true
+   },
+   {
+    "desc": "SIMPLYCOOK.COM",
+    "name": "SimplyCook",
+    "kind": "subscription",
+    "category": "food-box",
+    "cadence": "monthly",
+    "amount": 12.99,
+    "active": true
+   },
+   {
+    "desc": "NORTONLIFELOCK",
+    "name": "Norton 360",
+    "kind": "subscription",
+    "category": "software",
+    "cadence": "yearly",
+    "amount": 84.99,
+    "active": true
+   },
+   {
+    "desc": "MICROSOFT*XBOX",
+    "name": "Xbox Game Pass",
+    "kind": "subscription",
+    "category": "gaming",
+    "cadence": "monthly",
+    "amount": 14.99,
+    "active": true
+   },
+   {
+    "desc": "LEEDS CC ACTIVE LEEDS",
+    "name": "Active Leeds",
+    "kind": "subscription",
+    "category": "gym",
+    "cadence": "monthly",
+    "amount": 39.9,
+    "active": true
+   },
+   {
+    "desc": "SPLASH SWIM ACADEMY GC",
+    "name": "Splash Swim Academy",
+    "kind": "subscription",
+    "category": "kids-activity",
+    "cadence": "monthly",
+    "amount": 46.0,
+    "active": true
+   },
+   {
+    "desc": "CANCER RESEARCH UK",
+    "name": "Cancer Research UK",
+    "kind": "subscription",
+    "category": "charity",
+    "cadence": "monthly",
+    "amount": 8.0,
+    "active": true
+   },
+   {
+    "desc": "GOHENRY",
+    "name": "GoHenry",
+    "kind": "subscription",
+    "category": "kids-money",
+    "cadence": "monthly",
+    "amount": 4.99,
+    "active": true
+   },
+   {
+    "desc": "FMX SVCS 448213",
+    "name": "FMX SVCS",
+    "kind": "subscription",
+    "category": "unknown",
+    "cadence": "monthly",
+    "amount": 11.0,
+    "active": true
+   }
+  ],
+  "expectFlags": [
+   {
+    "type": "duplicate",
+    "name": "Google One",
+    "amount": 1.99
+   },
+   {
+    "type": "duplicate",
+    "name": "Deliveroo Plus",
+    "amount": 3.49
+   },
+   {
+    "type": "price-rise",
+    "name": "Sky",
+    "amount": 78.5
+   },
+   {
+    "type": "price-rise",
+    "name": "The Week Junior",
+    "amount": 47.99
+   },
+   {
+    "type": "trial-converted",
+    "name": "SimplyCook",
+    "amount": 12.99
+   },
+   {
+    "type": "new",
+    "name": "Xbox Game Pass",
+    "amount": 14.99
+   },
+   {
+    "type": "renewal-soon",
+    "name": "Norton 360",
+    "amount": 84.99
+   },
+   {
+    "type": "double-charge",
+    "name": "Spotify",
+    "amount": 19.99
+   },
+   {
+    "type": "unknown",
+    "name": "FMX SVCS",
+    "amount": 11.0
+   }
+  ],
+  "mustNotBeSubscription": [
+   "Groceries",
+   "Eating out",
+   "Transport",
+   "Shopping",
+   "Fuel",
+   "Greggs",
+   "First Bus",
+   "Tesco Stores",
+   "Tesco Bank",
+   "ParentPay",
+   "L Carter",
+   "HMRC Child Benefit",
+   "Non-sterling transaction fee",
+   "Amazon Prime (active)"
+  ]
+ }
+]

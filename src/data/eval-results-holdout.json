@@ -1,0 +1,115 @@
+{
+ "runAt": "2026-11-03T20:33:48.538Z",
+ "mode": "rules+ai",
+ "households": [
+  {
+   "id": "holdout-a",
+   "name": "Hannah & Dev",
+   "format": "Generic",
+   "txns": 696,
+   "skipped": 0,
+   "subs": {
+    "tp": 17,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "bills": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "exact": 26,
+   "matched": 26,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "flags": {
+    "tp": 11,
+    "fp": 0,
+    "fn": 1,
+    "missed": [
+     "duplicate: Three"
+    ],
+    "extra": []
+   },
+   "worthALook": 825.16,
+   "toClaimBack": 9.99,
+   "subscriptionsAnnual": 4581.52
+  },
+  {
+   "id": "holdout-b",
+   "name": "The Hughes family",
+   "format": "Generic",
+   "txns": 697,
+   "skipped": 0,
+   "subs": {
+    "tp": 18,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "bills": {
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "exact": 30,
+   "matched": 30,
+   "ai": {
+    "ok": 0,
+    "total": 0
+   },
+   "flags": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "missed": [],
+    "extra": []
+   },
+   "worthALook": 700.51,
+   "toClaimBack": 19.99,
+   "subscriptionsAnnual": 2729.99
+  }
+ ],
+ "overall": {
+  "txns": 1393,
+  "streams": 59,
+  "subscriptions": {
+   "tp": 35,
+   "fp": 0,
+   "fn": 0,
+   "precision": 100,
+   "recall": 100
+  },
+  "bills": {
+   "tp": 21,
+   "fp": 0,
+   "fn": 0,
+   "precision": 100,
+   "recall": 100
+  },
+  "flags": {
+   "tp": 20,
+   "fp": 0,
+   "fn": 1,
+   "precision": 100,
+   "recall": 95.2
+  },
+  "exactPrice": {
+   "ok": 56,
+   "total": 56
+  },
+  "aiLabels": {
+   "ok": 0,
+   "total": 0
+  }
+ }
+}

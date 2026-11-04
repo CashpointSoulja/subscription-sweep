@@ -1,0 +1,44 @@
+
+ RUN  v5.1.0 /Users/whtnybiatch/Career/products/subscription-sweep
+
+ ✓ tests/engine.test.ts > reading bank files > reads Monzo exports 3ms
+ ✓ tests/engine.test.ts > reading bank files > reads Nationwide exports with a preamble, £ signs, thousands commas and Paid out/Paid in columns 0ms
+ ✓ tests/engine.test.ts > reading bank files > reads Starling exports and Windows line endings with a BOM 0ms
+ ✓ tests/engine.test.ts > reading bank files > reads Lloyds exports ("Transaction Description", separate Debit/Credit Amount) 0ms
+ ✓ tests/engine.test.ts > reading bank files > keeps commas inside quoted descriptions 0ms
+ ✓ tests/engine.test.ts > reading bank files > reads day-first dates, never US month-first 0ms
+ ✓ tests/engine.test.ts > reading bank files > handles odd amount formats 0ms
+ ✓ tests/engine.test.ts > reading bank files > explains what is wrong with a file it cannot read 1ms
+ ✓ tests/engine.test.ts > reading bank files > handles an empty file 0ms
+ ✓ tests/engine.test.ts > naming merchants > strips payment processors 1ms
+ ✓ tests/engine.test.ts > naming merchants > tells Tesco Mobile from a Tesco shop 1ms
+ ✓ tests/engine.test.ts > naming merchants > does not mistake LEON (restaurant) for E.ON (energy) 0ms
+ ✓ tests/engine.test.ts > naming merchants > treats standing orders to people as transfers 1ms
+ ✓ tests/engine.test.ts > naming merchants > uses an AI label only when confident 0ms
+ ✓ tests/engine.test.ts > finding subscriptions > finds a monthly subscription and works out the yearly cost 3ms
+ ✓ tests/engine.test.ts > finding subscriptions > ignores a weekly food shop and daily coffee even at the same price 2ms
+ ✓ tests/engine.test.ts > finding subscriptions > ignores a same-price daily bus fare from an unknown merchant 1ms
+ ✓ tests/engine.test.ts > finding subscriptions > spots a price rise and only counts the increase 17ms
+ ✓ tests/engine.test.ts > finding subscriptions > marks a cancelled subscription as ended, not active 0ms
+ ✓ tests/engine.test.ts > finding subscriptions > does not call switching gyms a duplicate 1ms
+ ✓ tests/engine.test.ts > finding subscriptions > flags two music apps and saves the cheaper one 1ms
+ ✓ tests/engine.test.ts > finding subscriptions > flags an unrefunded double charge but not a refunded one 1ms
+ ✓ tests/engine.test.ts > finding subscriptions > catches a free trial that became a paid plan after one charge 1ms
+ ✓ tests/engine.test.ts > finding subscriptions > warns before an annual plan renews 0ms
+ ✓ tests/engine.test.ts > finding subscriptions > never counts one series twice in the headline number 1ms
+ ✓ tests/engine.test.ts > finding subscriptions > returns an empty result for an empty statement 0ms
+ ✓ tests/engine.test.ts > merchant keys > drops reference codes but keeps brands with digits in their name 0ms
+ ✓ tests/engine.test.ts > merchant keys > treats savings standing orders and payments to friends as transfers 0ms
+ ✓ tests/engine.test.ts > message copy > says "1 subscription", not "1 subscriptions" 0ms
+ ✓ tests/engine.test.ts > second blind test fixes > reads through Santander FX wrappers ("GBP" is not BP fuel) 0ms
+ ✓ tests/engine.test.ts > second blind test fixes > reads through HSBC prefixes and direct-debit mandates 0ms
+ ✓ tests/engine.test.ts > second blind test fixes > never counts loans, cards, buy-now-pay-later, cash or bank fees as subscriptions 0ms
+ ✓ tests/engine.test.ts > second blind test fixes > treats a big jump at one merchant as a plan change, not a price rise 0ms
+ ✓ tests/engine.test.ts > second blind test fixes > spots a monthly plan switched to annual 0ms
+ ✓ tests/engine.test.ts > second blind test fixes > warns before a yearly bill renews, without inventing a saving 0ms
+
+ Test Files  1 passed (1)
+      Tests  35 passed (35)
+   Start at  20:33:50
+   Duration  204ms (tests 46%, transform 30%, import 20%, worker 4%)
+

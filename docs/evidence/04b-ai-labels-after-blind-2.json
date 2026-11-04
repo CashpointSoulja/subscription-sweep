@@ -1,0 +1,1149 @@
+{
+ "ROBLOX CORPORATION": {
+  "name": "Roblox",
+  "category": "gaming",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "ROBLOX CORPORATION",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "THE BREAD CLUB": {
+  "name": "The Bread Club",
+  "category": "food-box",
+  "confidence": 0.7,
+  "descriptor": "SQ *THE BREAD CLUB",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:10:38.977Z"
+ },
+ "KLX MEMBER SERVICES": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "KLX*MEMBER SERVICES 0203",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "CRUNCHYROLL": {
+  "name": "Crunchyroll",
+  "category": "video",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "CRUNCHYROLL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "PATREON MEMBERSHIP": {
+  "name": "Patreon",
+  "category": "creator",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "PATREON* MEMBERSHIP",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "SAVINGS SO": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.1,
+  "descriptor": "SAVINGS SO 204577 43128890",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:46:20.219Z"
+ },
+ "C ADEYEMI": {
+  "name": "Unknown",
+  "category": "person",
+  "confidence": 0.1,
+  "descriptor": "C ADEYEMI 5ASIDE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:46:20.219Z"
+ },
+ "SHELTER": {
+  "name": "Shelter",
+  "category": "charity",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "SHELTER",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "VLXSERV": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "PAYPAL *VLXSERV",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NATIONWIDE BS": {
+  "name": "Nationwide Building Society",
+  "category": "other",
+  "confidence": 0.9,
+  "descriptor": "NATIONWIDE BS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:46:20.219Z"
+ },
+ "FIRST BUS MTICKET": {
+  "name": "First Bus",
+  "category": "transport",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "FIRST BUS MTICKET",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "SPLASH SWIM ACADEMY": {
+  "name": "Splash Swim Academy",
+  "category": "fitness",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "SPLASH SWIM ACADEMY GC",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "LEEDS CC ACTIVE": {
+  "name": "Active Leeds",
+  "category": "fitness",
+  "confidence": 0.8,
+  "annual": false,
+  "descriptor": "LEEDS CC ACTIVE LEEDS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "DVLA": {
+  "name": "DVLA",
+  "category": "other",
+  "confidence": 0.95,
+  "descriptor": "DVLA-YD19KXR",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:46:20.219Z"
+ },
+ "NATIONAL TRUST": {
+  "name": "National Trust",
+  "category": "charity",
+  "confidence": 0.97,
+  "annual": true,
+  "descriptor": "DD NATIONAL TRUST",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "FMX SVCS": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "FMX SVCS 448213",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "CANCER RESEARCH": {
+  "name": "Cancer Research UK",
+  "category": "charity",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "CANCER RESEARCH UK",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "GOHENRY": {
+  "name": "GoHenry",
+  "category": "finance",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "GOHENRY",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BEE NETWORK BUS": {
+  "name": "Bee Network",
+  "category": "transport",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "BEE NETWORK BUS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BOQUERIA TAPAS": {
+  "name": "Boqueria",
+  "category": "eating-out",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "BOQUERIA TAPAS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "STRONGHOLD GYM BRIXTON": {
+  "name": "Stronghold Gym",
+  "category": "fitness",
+  "confidence": 0.75,
+  "annual": false,
+  "descriptor": "STRONGHOLD GYM BRIXTON",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "ENGLISH HERITAGE": {
+  "name": "English Heritage",
+  "category": "charity",
+  "confidence": 0.97,
+  "annual": true,
+  "descriptor": "ENGLISH HERITAGE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "CASH WITHDRAWAL LINK": {
+  "name": "Link",
+  "category": "other",
+  "confidence": 0.8,
+  "annual": false,
+  "descriptor": "CASH WITHDRAWAL LINK BRIXTON",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:50:42.056Z"
+ },
+ "TK MAXX": {
+  "name": "TK Maxx",
+  "category": "retail",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "TK MAXX",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "HONEST BURGERS BRIXTON": {
+  "name": "Honest Burgers",
+  "category": "eating-out",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "HONEST BURGERS BRIXTON",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NON STERLING TRANSACTION": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "NON-STERLING TRANSACTION FEE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:50:42.056Z"
+ },
+ "1PASSWORD.COM": {
+  "name": "1Password",
+  "category": "software",
+  "confidence": 0.97,
+  "annual": true,
+  "descriptor": "1PASSWORD.COM",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:50:42.056Z"
+ },
+ "SELFRIDGES&CO": {
+  "name": "Selfridges",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "SELFRIDGES&CO",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NOT THE HIGH": {
+  "name": "Not On The High Street",
+  "category": "shopping",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "NOT ON THE HIGH STREET",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TAP AIR PORTUGAL": {
+  "name": "TAP Air Portugal",
+  "category": "transport",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "TAP AIR PORTUGAL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "UNIQLO REGENT ST": {
+  "name": "Uniqlo",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "UNIQLO, REGENT ST",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BOOKING": {
+  "name": "Booking.com",
+  "category": "other",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "BOOKING.COM",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "FLYING TIGER BRIXTON": {
+  "name": "Flying Tiger",
+  "category": "retail",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "FLYING TIGER BRIXTON",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "PINGO DOCE LISBOA": {
+  "name": "Pingo Doce",
+  "category": "groceries",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "PINGO DOCE LISBOA",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TIME OUT MARKET": {
+  "name": "Time Out Market",
+  "category": "eating-out",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "TIME OUT MARKET LISBOA",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "CERVEJARIA RAMIRO": {
+  "name": "Cervejaria Ramiro",
+  "category": "eating-out",
+  "confidence": 0.85,
+  "annual": false,
+  "descriptor": "CERVEJARIA RAMIRO",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BRIXTON VILLAGE GRILL": {
+  "name": "Brixton Village Grill",
+  "category": "eating-out",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "SQ *BRIXTON VILLAGE GRILL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "AIRBNB": {
+  "name": "Airbnb",
+  "category": "other",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "AIRBNB * HMQ8ZK2Y4",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "KAOSAN BRIXTON": {
+  "name": "Kaosan Brixton",
+  "category": "eating-out",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "SUMUP *KAOSAN BRIXTON",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "GWR TICKETS": {
+  "name": "GWR",
+  "category": "transport",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "GWR TICKETS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "THE TRINITY ARMS": {
+  "name": "The Trinity Arms",
+  "category": "eating-out",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "THE TRINITY ARMS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "PORTHMINSTER BEACH CAFE": {
+  "name": "Porthminster Beach Cafe",
+  "category": "eating-out",
+  "confidence": 0.8,
+  "annual": false,
+  "descriptor": "PORTHMINSTER BEACH CAFE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "ST IVES FISH": {
+  "name": "St Ives Fish & Chips",
+  "category": "eating-out",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "ST IVES FISH & CHIPS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "HMRC SELF ASSESSMENT": {
+  "name": "HMRC",
+  "category": "other",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "HMRC SELF ASSESSMENT",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TIMPSON": {
+  "name": "Timpson",
+  "category": "retail",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "TIMPSON LTD",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "FUTURE PUBLISHING": {
+  "name": "Future Publishing",
+  "category": "news",
+  "confidence": 0.7,
+  "annual": false,
+  "descriptor": "FUTURE PUBLISHING LTD",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "PARENTPAY": {
+  "name": "ParentPay",
+  "category": "education",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "PARENTPAY",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "SMYTHS TOYS LEEDS": {
+  "name": "Smyths Toys",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "SMYTHS TOYS LEEDS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "CASH LNK HEADINGLEY": {
+  "name": "Link",
+  "category": "other",
+  "confidence": 0.8,
+  "annual": false,
+  "descriptor": "CASH LNK HEADINGLEY",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:50:42.056Z"
+ },
+ "ODEON CINEMAS": {
+  "name": "Odeon",
+  "category": "other",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "ODEON CINEMAS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NORTONLIFELOCK": {
+  "name": "Norton",
+  "category": "software",
+  "confidence": 0.97,
+  "annual": true,
+  "descriptor": "NORTONLIFELOCK",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "GOHENRY TOPUP": {
+  "name": "GoHenry",
+  "category": "finance",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "GOHENRY TOPUP",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "JET2HOLIDAYS": {
+  "name": "Jet2holidays",
+  "category": "other",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS JET2HOLIDAYS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "MATALAN": {
+  "name": "Matalan",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "MATALAN",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NEXT RETAIL": {
+  "name": "Next",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS NEXT RETAIL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "THE WORKS": {
+  "name": "The Works",
+  "category": "retail",
+  "confidence": 0.85,
+  "annual": false,
+  "descriptor": "THE WORKS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "HEADINGLEY CAFE": {
+  "name": "Headingley Cafe",
+  "category": "eating-out",
+  "confidence": 0.5,
+  "annual": false,
+  "descriptor": "SUMUP *HEADINGLEY CAFE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "RAC MOTORING SERVICES": {
+  "name": "RAC",
+  "category": "insurance",
+  "confidence": 0.95,
+  "annual": true,
+  "descriptor": "RAC MOTORING SERVICES",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:50:42.056Z"
+ },
+ "KWIK FIT": {
+  "name": "Kwik Fit",
+  "category": "transport",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "KWIK FIT",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "MERCADONA ALICANTE": {
+  "name": "Mercadona",
+  "category": "groceries",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "MERCADONA ALICANTE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NON STERLING TRANS": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "NON-STERLING TRANS FEE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T19:50:42.056Z"
+ },
+ "AQUALANDIA BENIDORM": {
+  "name": "Aqualandia",
+  "category": "other",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "AQUALANDIA BENIDORM",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "RESTAURANTE EL PALMERAL": {
+  "name": "Restaurante El Palmeral",
+  "category": "eating-out",
+  "confidence": 0.5,
+  "annual": false,
+  "descriptor": "RESTAURANTE EL PALMERAL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TAXI ALICANTE": {
+  "name": "Unknown",
+  "category": "transport",
+  "confidence": 0.3,
+  "annual": false,
+  "descriptor": "TAXI ALICANTE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "SIMPLYCOOK": {
+  "name": "Simplycook",
+  "category": "food-box",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "SIMPLYCOOK.COM",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "SCHOOLWEAR CENTRES": {
+  "name": "Schoolwear Centres",
+  "category": "retail",
+  "confidence": 0.7,
+  "annual": false,
+  "descriptor": "SCHOOLWEAR CENTRES",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "CLARKS": {
+  "name": "Clarks",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "CLARKS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "HALFORDS": {
+  "name": "Halfords",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "HALFORDS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "1PASSWORD": {
+  "name": "1Password",
+  "category": "software",
+  "confidence": 0.97,
+  "annual": true,
+  "descriptor": "1PASSWORD.COM",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BLACK HORSE": {
+  "name": "Black Horse",
+  "category": "other",
+  "confidence": 0.7,
+  "annual": false,
+  "descriptor": "DD BLACK HORSE LTD",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "BRISTOL WESSEX BILLING": {
+  "name": "Wessex Water",
+  "category": "water",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "DD BRISTOL WESSEX BILLING",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "UNICEF": {
+  "name": "UNICEF UK",
+  "category": "charity",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "DD UNICEF UK",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "CKO MBRSHP SVCS": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.3,
+  "annual": false,
+  "descriptor": "VIS CKO*MBRSHP SVCS 0330",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "L MIDJOURNEY SOUTH": {
+  "name": "Midjourney",
+  "category": "ai-assistant",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS INT'L 0036139505 MIDJOURNEY INC SOUTH SAN FRAN USD 10.00 @ 1.3537",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "IMMEDIATE MEDIA CO": {
+  "name": "Immediate Media",
+  "category": "news",
+  "confidence": 0.8,
+  "annual": false,
+  "descriptor": "DD IMMEDIATE MEDIA CO",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "AMAZON": {
+  "name": "Amazon",
+  "category": "shopping",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "Amazon",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NUFFIELD HEALTH": {
+  "name": "Nuffield Health",
+  "category": "wellbeing",
+  "confidence": 0.85,
+  "annual": false,
+  "descriptor": "DD NUFFIELD HEALTH",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "GWR": {
+  "name": "GWR",
+  "category": "transport",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS GWR",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "ATM CASH HSBC": {
+  "name": "HSBC",
+  "category": "other",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "ATM CASH HSBC CLIFTON",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "BARCLAYCARD": {
+  "name": "Barclaycard",
+  "category": "other",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "DD BARCLAYCARD",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "THE BRISTOL LOAF": {
+  "name": "The Bristol Loaf",
+  "category": "eating-out",
+  "confidence": 0.7,
+  "annual": false,
+  "descriptor": "VIS THE BRISTOL LOAF",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "SMYTHS TOYS": {
+  "name": "Smyths Toys",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS SMYTHS TOYS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "FIRST BUS BRISTOL": {
+  "name": "First Bus",
+  "category": "transport",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "))) FIRST BUS BRISTOL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BOSTON TEA PARTY": {
+  "name": "Boston Tea Party",
+  "category": "eating-out",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "))) BOSTON TEA PARTY",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "PIZZA EXPRESS": {
+  "name": "Pizza Express",
+  "category": "eating-out",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "VIS PIZZA EXPRESS",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "PAYBYPHONE BRISTOL": {
+  "name": "PayByPhone",
+  "category": "transport",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "VIS PAYBYPHONE BRISTOL",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "AMAZON KYBQRC9AU": {
+  "name": "Amazon",
+  "category": "shopping",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS AMAZON* KYBQRC9AU",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "SUMUP THE YOGA": {
+  "name": "The Yoga Shed",
+  "category": "fitness",
+  "confidence": 0.7,
+  "annual": false,
+  "descriptor": "VIS SUMUP *THE YOGA SHED",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "NATIONAL TRUST TYNTESFIELD": {
+  "name": "National Trust",
+  "category": "charity",
+  "confidence": 0.97,
+  "annual": true,
+  "descriptor": "VIS NATIONAL TRUST TYNTESFIELD",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "AMAZON UTGKYBM2W": {
+  "name": "Amazon",
+  "category": "shopping",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS AMAZON* UTGKYBM2W",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "NATIONAL TRUST LACOCK": {
+  "name": "National Trust",
+  "category": "charity",
+  "confidence": 0.97,
+  "annual": true,
+  "descriptor": "VIS NATIONAL TRUST LACOCK",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "AMAZON NQD9AJVPX": {
+  "name": "Amazon",
+  "category": "shopping",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS AMAZON* NQD9AJVPX",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "AMAZON ZNRXLEVFV": {
+  "name": "Amazon",
+  "category": "shopping",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS AMAZON* ZNRXLEVFV",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "L MERCADONA NERJA": {
+  "name": "Mercadona",
+  "category": "groceries",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "VIS INT'L 0032324514 MERCADONA NERJA EUR 64.20 @ 1.1606",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "L BAR LA": {
+  "name": "Bar La Terraza",
+  "category": "eating-out",
+  "confidence": 0.5,
+  "annual": false,
+  "descriptor": "VIS INT'L 0076901056 BAR LA TERRAZA NERJA EUR 23.50 @ 1.1606",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "L CUEVA DE": {
+  "name": "Cueva de Nerja",
+  "category": "other",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "VIS INT'L 0078509595 CUEVA DE NERJA EUR 36.00 @ 1.1601",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "L RESTAURANTE EL": {
+  "name": "Restaurante El Balcon",
+  "category": "eating-out",
+  "confidence": 0.5,
+  "annual": false,
+  "descriptor": "VIS INT'L 0051781189 RESTAURANTE EL BALCON EUR 58.40 @ 1.1629",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "L CHIRINGUITO PLAYA": {
+  "name": "Chiringuito Playa Nerja",
+  "category": "eating-out",
+  "confidence": 0.5,
+  "annual": false,
+  "descriptor": "VIS INT'L 0010798289 CHIRINGUITO PLAYA NERJA EUR 47.60 @ 1.1662",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "L REPSOL MALAGA": {
+  "name": "Repsol",
+  "category": "transport",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS INT'L 0021282522 REPSOL MALAGA AEROPUERT EUR 52.30 @ 1.1688",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "AMAZON RWUMD4MTE": {
+  "name": "Amazon",
+  "category": "shopping",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "VIS AMAZON* RWUMD4MTE",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TO PETPLAN REF": {
+  "name": "Petplan",
+  "category": "insurance",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO PETPLAN REF PP3390112, MANDATE NO 0017",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "TO FREEDOM LEISURE": {
+  "name": "Freedom Leisure",
+  "category": "fitness",
+  "confidence": 0.85,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO FREEDOM LEISURE REF FL0048213, MANDATE NO 0019",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "TO TOOB REF": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO TOOB LIMITED REF TB205571, MANDATE NO 0016",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "CASH WITHDRAWAL AT": {
+  "name": "Santander",
+  "category": "other",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "CASH WITHDRAWAL AT SANTANDER ATM WESTERN ROAD HOVE, ON 15-01-2026",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "TO BRITISH RED": {
+  "name": "British Red Cross",
+  "category": "charity",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO BRITISH RED CROSS REF 7721904, MANDATE NO 0011",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "URBAN JUNGLE": {
+  "name": "Urban Jungle",
+  "category": "retail",
+  "confidence": 0.55,
+  "annual": false,
+  "descriptor": "Urban Jungle",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "PROTON": {
+  "name": "Proton",
+  "category": "software",
+  "confidence": 0.9,
+  "annual": true,
+  "descriptor": "Proton",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "FLOUR POT BAKERY": {
+  "name": "Flour Pot Bakery",
+  "category": "eating-out",
+  "confidence": 0.6,
+  "annual": false,
+  "descriptor": "Flour Pot Bakery",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "PETS AT HOME": {
+  "name": "Pets at Home",
+  "category": "retail",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "Pets at Home",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BTN BIKESHARE": {
+  "name": "BTN Bikeshare",
+  "category": "transport",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "BTN BikeShare",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TO ZOPA BANK": {
+  "name": "Zopa",
+  "category": "other",
+  "confidence": 0.9,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO ZOPA BANK LIMITED REF 99812734, MANDATE NO 0021",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "WATERSTONES": {
+  "name": "Waterstones",
+  "category": "books",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "Waterstones",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TO AMERICAN EXPRESS": {
+  "name": "American Express",
+  "category": "other",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO AMERICAN EXPRESS REF 3717XXXXXXX1004, MANDATE NO 0002",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "BILLS RESTAURANT BRIGHTON": {
+  "name": "Bills",
+  "category": "eating-out",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "Bills Restaurant Brighton",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "VINTED": {
+  "name": "Vinted",
+  "category": "shopping",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "Vinted",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "KOMOOT": {
+  "name": "Komoot",
+  "category": "fitness",
+  "confidence": 0.9,
+  "annual": true,
+  "descriptor": "Komoot",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "KLARNA": {
+  "name": "Klarna",
+  "category": "other",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "Klarna",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:27:53.113Z"
+ },
+ "TELEGRAPH MEDIA GROUP": {
+  "name": "The Telegraph",
+  "category": "news",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "Telegraph Media Group",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BP LITTLE ACORNS": {
+  "name": "Little Acorns Nursery",
+  "category": "education",
+  "confidence": 0.55,
+  "annual": false,
+  "descriptor": "BP LITTLE ACORNS NURSERY",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BP M KOWALSKA": {
+  "name": "M Kowalska",
+  "category": "person",
+  "confidence": 0.8,
+  "annual": false,
+  "descriptor": "BP M KOWALSKA CLEANING",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "MBRSHP SVCS": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "VIS CKO*MBRSHP SVCS 0330",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "THE YOGA SHED": {
+  "name": "The Yoga Shed",
+  "category": "fitness",
+  "confidence": 0.7,
+  "annual": false,
+  "descriptor": "VIS SUMUP *THE YOGA SHED",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BHBUSES MTICKET": {
+  "name": "Brighton & Hove Buses",
+  "category": "transport",
+  "confidence": 0.85,
+  "annual": false,
+  "descriptor": "CARD PAYMENT TO BHBUSES MTICKET,68.00 GBP, RATE 1.00/GBP ON 03-11-2025",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "FREEDOM LEISURE": {
+  "name": "Freedom Leisure",
+  "category": "fitness",
+  "confidence": 0.8,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO FREEDOM LEISURE REF FL0048213, MANDATE NO 0019",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "BRITISH RED CROSS": {
+  "name": "British Red Cross",
+  "category": "charity",
+  "confidence": 0.97,
+  "annual": false,
+  "descriptor": "DIRECT DEBIT PAYMENT TO BRITISH RED CROSS REF 7721904, MANDATE NO 0011",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "TPR": {
+  "name": "Unknown",
+  "category": "other",
+  "confidence": 0.2,
+  "annual": false,
+  "descriptor": "CARD PAYMENT TO TPR*SUBSCR 0845,6.00 GBP, RATE 1.00/GBP ON 09-11-2025",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "STEAMGAMES": {
+  "name": "Steam",
+  "category": "gaming",
+  "confidence": 0.95,
+  "annual": false,
+  "descriptor": "CARD PAYMENT TO STEAMGAMES.COM 4259522,25.20 GBP, RATE 1.00/GBP ON 28-11-2025",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ },
+ "THE GEORGE PAYNE": {
+  "name": "The George Payne",
+  "category": "eating-out",
+  "confidence": 0.5,
+  "annual": false,
+  "descriptor": "CARD PAYMENT TO THE GEORGE PAYNE,26.09 GBP, RATE 1.00/GBP ON 22-12-2025",
+  "model": "claude haiku via Claude Code",
+  "labelledAt": "2026-11-03T20:32:19.912Z"
+ }
+}
