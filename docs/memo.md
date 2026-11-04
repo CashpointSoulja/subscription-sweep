@@ -41,4 +41,4 @@ The streaming "stack" flag (most likely to feel preachy), the "new this month" f
 
 Founder of CleanSL8, a cleaning startup I built to 500+ jobs booked and run with AI agents: GTM, booking, pricing and ops, all built myself. Before that, Operations Lead in Corgi's Special Projects unit, brought in to lead AI adoption, and forward-deployed AI and automation work at ServiceNow. I'm not a software engineer. I build like one, with Claude Code as my working environment, and I know where the edge is.
 
-**Links:** the product · [PRD](#/docs/PRD) · [Build log](#/docs/build-log) · [Accuracy](#/accuracy)
+**Links:** [the product](https://subscription-sweep.vercel.app) · [PRD](https://subscription-sweep.vercel.app/#/docs/PRD) · [build log](https://subscription-sweep.vercel.app/#/docs/build-log) · [accuracy](https://subscription-sweep.vercel.app/#/accuracy) · [code](https://github.com/CashpointSoulja/subscription-sweep)

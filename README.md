@@ -2,6 +2,8 @@
 
 Drop in a bank statement. See every subscription, what it costs a year, and the ones worth a look: two music apps, a price that crept up, a free trial that quietly became £24.99 a month.
 
+**Live:** https://subscription-sweep.vercel.app
+
 A working concept by Ayo Ahmed for Nous's Product Builder role (subscriptions surface). Not affiliated with Nous. Sample households are made up.
 
 **Rules own every £. AI only names things.**

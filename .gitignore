@@ -9,3 +9,4 @@ research/reviews/trustpilot.json
 research/reviews/analysis/
 # local tooling
 .vercel/
+.vercel
