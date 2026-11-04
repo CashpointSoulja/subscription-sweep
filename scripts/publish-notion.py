@@ -185,6 +185,12 @@ def main():
             composio('NOTION_REPLACE_PAGE_CONTENT', {'page_id': page, 'new_children': [para], 'archive_existing_children': True, 'create_backup': False})
             print(f'{doc}: cleared and restarted from the intro')
             blocks = blocks[1:]
+        elif doc == 'build-log' and any(a.startswith('--append-from=') for a in sys.argv):
+            # Append only the new sections, from the first heading that starts with this text (e.g. "17.").
+            want = next(a.split('=', 1)[1] for a in sys.argv if a.startswith('--append-from='))
+            first = next(i for i, b in enumerate(blocks) if b.get('type') == 'heading_2' and want in json.dumps(b['heading_2'], ensure_ascii=False))
+            print(f'build-log: appending from block {first} ("{want}")')
+            blocks = blocks[first:]
         elif doc == 'build-log' and '--resume-build-log' in sys.argv:
             first = next(i for i, b in enumerate(blocks) if '_upload' in b)
             print(f'build-log: resuming at block {first} (text before it is already on the page)')

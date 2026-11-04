@@ -1,9 +1,10 @@
 import { ArrowRight, Bot, Ruler } from 'lucide-react';
 import { FLAG_ICON } from '../components/FlagCard';
 import { Statement } from '../components/Statement';
-import { Upload } from '../components/Upload';
+import { Upload, type OnFiles } from '../components/Upload';
 import { HOUSEHOLDS, owner, sweepHousehold } from '../data';
 import { gbp, gbp0, type Flag } from '../engine';
+import { Reveal } from '../motion';
 
 const CATCHES: { type: Flag['type']; name: string; rule: string }[] = [
   { type: 'duplicate', name: 'Two services doing one job', rule: 'Two music apps, two cloud plans, two AI assistants, or the same service paid twice' },
@@ -16,7 +17,7 @@ const CATCHES: { type: Flag['type']; name: string; rule: string }[] = [
   { type: 'new', name: 'New this month', rule: 'Started in the last 45 days. Worth a second look' },
 ];
 
-export function Landing({ onFile }: { onFile: (name: string, text: string) => void }) {
+export function Landing({ onFiles }: { onFiles: OnFiles }) {
   const all = HOUSEHOLDS.map(h => ({ h, ...sweepHousehold(h.id) }));
   const example = (t: Flag['type']) => {
     const f = all.flatMap(x => x.result.flags).find(f => f.type === t);
@@ -39,7 +40,7 @@ export function Landing({ onFile }: { onFile: (name: string, text: string) => vo
           <Statement />
         </section>
 
-        <section className="section">
+        <Reveal as="section" className="section">
           <div className="section-head">
             <h2>Eight things worth a look</h2>
             <p>Each one is a fixed rule you can read, not a guess. Examples below are the real output on the sample households.</p>
@@ -58,9 +59,9 @@ export function Landing({ onFile }: { onFile: (name: string, text: string) => vo
               );
             })}
           </div>
-        </section>
+        </Reveal>
 
-        <section className="section">
+        <Reveal as="section" className="section">
           <div className="section-head">
             <h2>Three households, swept</h2>
             <p>Made-up people, realistic bank files: a Monzo export, a Nationwide export and a Starling export, 12 months each.</p>
@@ -79,9 +80,9 @@ export function Landing({ onFile }: { onFile: (name: string, text: string) => vo
               </a>
             ))}
           </div>
-        </section>
+        </Reveal>
 
-        <section className="section">
+        <Reveal as="section" className="section">
           <div className="section-head">
             <h2>Rules own the money. AI only names things</h2>
             <p>A wrong label is annoying. A wrong £ figure costs someone money. So the model never touches an amount, a date or a total.</p>
@@ -109,15 +110,15 @@ export function Landing({ onFile }: { onFile: (name: string, text: string) => vo
               <p style={{ marginTop: 16, marginBottom: 0 }}><a href="#/how" className="secondary">How it works, with the real AI output <ArrowRight size={12} strokeWidth={1.5} /></a></p>
             </div>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="section" id="upload">
+        <Reveal as="section" className="section" id="upload">
           <div className="section-head">
             <h2>Try your own statement</h2>
             <p>Export a CSV from your banking app and drop it in. It's read in this tab and never leaves your device. Close the tab and it's gone.</p>
           </div>
-          <Upload onFile={onFile} />
-        </section>
+          <Upload onFiles={onFiles} />
+        </Reveal>
       </div>
     </>
   );

@@ -42,6 +42,8 @@ for (const c of CASES) {
   console.log(`${pass ? 'PASS' : 'FAIL'}  ${c.file.padEnd(26)} ${String(ms).padStart(5)}ms  ${c.expect}`);
   await page.evaluate(() => window.scrollTo({ top: 0 }));
   await page.goto(base + '#/sweep/yours');
+  // Since 4 Nov a result replaces the drop zone; "Start over" brings it back.
+  if (await page.locator('button:has-text("Start over")').count()) await page.click('button:has-text("Start over")');
   await page.waitForTimeout(400);
 }
 await ctx.close();

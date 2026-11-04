@@ -189,3 +189,90 @@ Docs went to Notion so they're easy to share. Three things broke on the way and 
 ## 16. Live (4 Nov)
 
 It's live at **https://subscription-sweep.vercel.app**, with the code public at **github.com/CashpointSoulja/subscription-sweep**. Before publishing I checked every file for private details and kept my working notes and the raw review data out. That check caught one: the docs page was loading every Markdown file in the folder, so my private notes would have shipped inside the site's code even though nothing linked to them. Fixed, then I scanned the built site for private strings (none) and re-ran the upload tests against the live site: 7/7.
+
+## 17. Making it feel steady (4 Nov)
+
+Using it myself, it felt fidgety: press a household and the whole page moves. Three causes, all in my code:
+
+1. **The household switcher sat beside the title.** "Priya's sweep" is short, "The Okafor family's sweep" is long, so the switcher's position depended on whose sweep it was. In a narrower window it dropped onto its own line.
+2. **Every click jumped back to the top.** The router scrolled to the top on any change, including switching household.
+3. **The scrollbar came and went.** The sample pages are long and "Your file" is short, so the scrollbar appeared and disappeared and the whole layout slid sideways by its width.
+
+![Before: the switcher sits beside the title](../public/shots/before-sweep-okafor-top.png)
+*Before. The switcher's place depends on the title's length.*
+
+![After: the household bar is pinned under the nav](../public/shots/polish-sweep-okafor-top.png)
+*After. The household bar is pinned under the nav, in the same place on every household and while scrolling.*
+
+What changed:
+
+| | Before | After |
+|---|---|---|
+| Household switcher | Beside the title, moved with it | Pinned bar under the nav, never moves. A highlight slides to the current household. Arrow keys switch |
+| Clicking a household | Jumped to the top | Stays put. If you're far down, it glides back to the new totals |
+| Scrollbar | Came and went | Space always reserved |
+| Numbers | Snapped | Roll from the last household's figure to the new one |
+| Cards, table, lists | Swapped instantly | Rise in one after another |
+| Chart | Static | Bars grow, then glide between households. Hover a bar for that month |
+| Nora's message | All at once | Bubbles arrive one by one with a typing indicator, each taking its full space from the start, so nothing below moves |
+| Flags | Text only | Tap one to see the payments behind it, newest first, with the bank text |
+| Phone | Nav wrapped onto two lines, four stat boxes stacked | One-line nav, headline figure with three compact boxes underneath |
+
+![A flag opened: the payments behind it](../public/shots/polish-flag-open.png)
+*Tap a flag to see the payments behind it. This answers the top complaint in the Trustpilot reviews: people didn't trust the money maths, so the card shows its working.*
+
+![Phone: pinned bar while scrolled, a flag opened](../public/shots/polish-phone-pinned-bar.png)
+*On a phone the bar stays pinned and scrolls sideways rather than wrapping.*
+
+Two rules I held to. Nothing already on screen jumps: things fade and rise a few pixels into place. And animations only use transforms, which never count as layout movement, so the chart bars slide up inside a fixed frame instead of changing height. Everything switches off for people who set their device to reduce motion.
+
+I measured it rather than eyeballing it. The QA script clicks through every household and checks the switcher's exact position before, during and after each click, and records every layout shift the browser reports. First run: the switcher never moved, but the small grey lines under the numbers shuffled by fractions of a pixel as the numbers rolled, because that font's digits are different widths. Fix: only the big numbers roll (their font has same-width digits).
+
+## 18. Real bank files (4 Nov)
+
+People testing it will drop in their own statement, so I made test files in the awkward layouts UK banks actually export and ran them through the reader exactly as the browser read files then. **It got 1 of 8 right.**
+
+| Layout | What's awkward | First run | After |
+|---|---|---|---|
+| HSBC-style | No header row | 0 payments read | 39 read, PureGym and Netflix found |
+| Nationwide-style | Old Windows text, so the £ sign is a different byte | 0 read, every amount rejected | 18 read |
+| Amex credit card | Charges positive, repayment negative | The card repayment listed as a subscription, the 3 real ones missed | Adobe, Audible, Netflix. Repayment ignored |
+| Revolut | Declined and reverted payments in the file | 2 false "charged twice" flags | Left out, no false flags |
+| NatWest/RBS | Excel apostrophes, "Value" column | Right | Right |
+| Santander text file | Not a CSV at all | 0 read | 12 read |
+| Semicolons | Not commas | 0 read | 12 read |
+| One month only | Too short to repeat | "Nothing looks off" | "This file only covers 26 days", and Nora asks for 3 to 12 months |
+
+Now the reader looks at the file's first bytes before anything else. A PDF or an Excel file gets told how to get the CSV instead of a confusing columns error. It also reads OFX and QIF downloads, and you can drop a current account and a credit card together: if the same payment is in both, it counts once.
+
+![Amex and Revolut together](../public/shots/polish-amex-plus-revolut.png)
+*Two files at once. The notes say how each was read: positive card charges counted as money out, declined Revolut payments left out.*
+
+![One month only](../public/shots/polish-one-month.png)
+*A one-month file is never called all clear.*
+
+Not blind: I wrote these files and the fixes. That proves the layouts are handled, not that every bank's export matches them exactly. Evidence: `docs/evidence/09-…first-run.md` and `10-…after-fixes.md`.
+
+## 19. Production checks (4 Nov)
+
+- **Speed.** A 400,000-payment file took 19 seconds and froze the page. Two fixes: each bank description is looked up once instead of on every payment, and the price grouping keeps a running total instead of re-adding the group each time. Now 1.5 seconds, and it runs in a background thread, so the page keeps animating while it reads. Same answers: unit tests, the sample households and both blind sets score exactly as before.
+- **"Never uploaded" is enforced, not just written.** The site is served with a security policy (`connect-src 'none'`) telling the browser to refuse any request this page tries to send, to any server. It's strict enough that it blocked my own accessibility checker from injecting its script. Fonts are now served from the site itself instead of Google, and there are no analytics.
+- **Drop a file anywhere.** Before, a file that missed the drop zone made the browser open it and leave the site.
+- **Accessibility.** The light grey text was slightly too faint (4.3:1 against the 4.5:1 standard), and so was the teal "Not now" chip. Both darkened. Skip link, keyboard focus after an upload, and screen readers get final numbers, not rolling ones.
+- **Smaller download.** The docs load only when opened: 150 KB to 123 KB compressed.
+
+![Reading a file](../public/shots/polish-reading.png)
+*While it reads: a highlighter running down a statement.*
+
+![Drag a file anywhere](../public/shots/polish-drop-anywhere.png)
+*Drag a statement anywhere on the site.*
+
+How I tested it:
+
+| Test | First run | Now |
+|---|---|---|
+| Browser QA: stability, interactions, 17 upload cases, phone, reduced motion, accessibility (`scripts/qa.mjs`) | 76/88 | 89/89 |
+| Random use: 300 random clicks, scrolls, resizes, uploads, back/forward per run (`scripts/monkey.mjs`) | 2 of 3 runs found problems | 6 runs clean |
+| Unit tests | 35 | 54, including every new bank layout |
+
+The random-use test found three bugs no scripted test caught. Shrink the window from laptop to phone size and the page scrolled sideways by up to 242px: the nav's sliding highlight went invisible when its link was hidden on phones, but stayed parked at its laptop position, past the edge of the screen. On a phone, a long file name made the upload report wider than the screen. And after I made the docs load on demand, clicking Docs showed a near-empty page for a moment; they now load quietly once the first page is idle. All three fixed, and the first two now have a permanent check.

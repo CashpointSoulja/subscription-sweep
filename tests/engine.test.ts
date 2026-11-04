@@ -126,7 +126,7 @@ describe('finding subscriptions', () => {
   it('returns an empty result for an empty statement', () => {
     const r = sweep([], { periodEnd: END });
     expect(r.subscriptions).toHaveLength(0);
-    expect(composeMessage(r, 'Sam').lines.join(' ')).toMatch(/Nothing looks off/);
+    expect(composeMessage(r, 'Sam').lines.join(' ')).toMatch(/too short/); // an empty file is never called all clear (changed 4 Nov)
   });
 });
 

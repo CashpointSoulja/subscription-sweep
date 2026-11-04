@@ -19,7 +19,7 @@ export function Statement() {
     .slice(0, 14);
   return (
     <div className="statement-stage" aria-label="A bank statement with forgotten subscriptions highlighted">
-      <div className="statement">
+      <div className="statement draw">
         <div className="st-head">
           <div className="st-bank">Current account</div>
           <div className="st-meta">October 2026 · Priya · sample data</div>
@@ -27,7 +27,7 @@ export function Statement() {
         {rows.map((t, i) => {
           const n = NOTES.find(x => x.match(t.description, t.amount));
           return (
-            <div key={i} className={`st-row${n ? ' flag' : ''}`}>
+            <div key={i} className={`st-row${n ? ' flag' : ''}`} style={{ ['--i' as string]: i }}>
               <span>{fmtDate(t.date)}</span>
               <span className="desc"><span className={n ? 'mark' : ''}>{t.description.replace(/ \d{3}-\d{3}-\d{4}$/, '').slice(0, 26)}</span></span>
               <span className="amt"><span className={n ? 'mark' : ''}>{gbp(-t.amount)}</span></span>

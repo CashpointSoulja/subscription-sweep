@@ -37,16 +37,25 @@ export function sweep(txns: Txn[], opts: SweepOptions = {}): SweepResult {
   // 1. Money out only, with reversed payments (refunds of the same amount within 10 days) taken out.
   const debits: Charge[] = [];
   const credits: Charge[] = [];
+  // The same bank text repeats thousands of times in a long file, so each one is looked up once.
+  const memo = new Map<string, MerchantInfo>();
   for (const t of txns) {
-    const merchant = resolveMerchant(t.description, opts.ai);
+    let merchant = memo.get(t.description);
+    if (!merchant) { merchant = resolveMerchant(t.description, opts.ai); memo.set(t.description, merchant); }
     const c = { date: t.date, amount: r2(Math.abs(t.amount)), raw: t.description, merchant };
     (t.amount <= 0 ? debits : credits).push(c);
   }
+  // Refund matching, indexed by merchant + amount so a long file stays fast. Same result as a linear scan:
+  // each refund cancels the earliest matching payment in the 10 days before it.
+  const byKey = new Map<string, number[]>();
+  debits.forEach((d, i) => { const k = `${d.merchant.key}|${d.amount}`; const l = byKey.get(k); if (l) l.push(i); else byKey.set(k, [i]); });
+  const refunded = new Set<number>();
   for (const cr of credits) {
-    const i = debits.findIndex(d => d.merchant.key === cr.merchant.key && d.amount === cr.amount &&
-      daysBetween(d.date, cr.date) >= 0 && daysBetween(d.date, cr.date) <= REFUND_WINDOW);
-    if (i >= 0) debits.splice(i, 1);
+    const i = byKey.get(`${cr.merchant.key}|${cr.amount}`)?.find(i => !refunded.has(i) &&
+      daysBetween(debits[i].date, cr.date) >= 0 && daysBetween(debits[i].date, cr.date) <= REFUND_WINDOW);
+    if (i !== undefined) refunded.add(i);
   }
+  if (refunded.size) { const kept = debits.filter((_, i) => !refunded.has(i)); debits.length = 0; debits.push(...kept); }
 
   // 2. Group by merchant. Spending, income and person-to-person transfers are never subscriptions.
   const groups = new Map<string, Charge[]>();
@@ -59,7 +68,7 @@ export function sweep(txns: Txn[], opts: SweepOptions = {}): SweepResult {
 
   const series: Series[] = [];
   for (const [key, charges] of groups) {
-    charges.sort((a, b) => toDay(a.date) - toDay(b.date));
+    charges.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
     for (const s of buildSeries(key, charges, end)) series.push(s);
   }
 
@@ -146,18 +155,19 @@ function buildSeries(key: string, charges: Charge[], end: string): Series[] {
 function clusterByAmount(charges: Charge[], tol: number): Charge[][] {
   const sorted = [...charges].sort((a, b) => a.amount - b.amount);
   const clusters: Charge[][] = [];
+  let sum = 0; // running total of the last cluster, so this stays linear on long files
   for (const c of sorted) {
     const last = clusters[clusters.length - 1];
-    const mean = last ? last.reduce((a, x) => a + x.amount, 0) / last.length : 0;
-    if (last && Math.abs(c.amount - mean) / mean <= tol) last.push(c);
-    else clusters.push([c]);
+    const mean = last ? sum / last.length : 0;
+    if (last && Math.abs(c.amount - mean) / mean <= tol) { last.push(c); sum += c.amount; }
+    else { clusters.push([c]); sum = c.amount; }
   }
-  return clusters.map(cl => cl.sort((a, b) => toDay(a.date) - toDay(b.date)));
+  return clusters.map(cl => cl.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0)));
 }
 
 /** Joins price levels that follow each other in time (a price rise), but keeps overlapping ones apart (two plans). */
 function stitch(clusters: Charge[][], maxJump: number, maxGap = 40): Charge[][] {
-  const byStart = [...clusters].sort((a, b) => toDay(a[0].date) - toDay(b[0].date));
+  const byStart = [...clusters].sort((a, b) => (a[0].date < b[0].date ? -1 : a[0].date > b[0].date ? 1 : 0));
   const out: Charge[][] = [];
   for (const cl of byStart) {
     const prev = out.find(p => {

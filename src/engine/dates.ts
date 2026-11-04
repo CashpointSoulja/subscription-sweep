@@ -29,7 +29,7 @@ export function parseDate(raw: string): string | null {
     if (mo < 1 || mo > 12 || d < 1 || d > 31) return null;
     return `${y}-${pad(mo)}-${pad(d)}`;
   }
-  m = s.match(/^(\d{1,2})\s+([A-Za-z]{3,4})[a-z]*\s+(\d{2,4})/);      // 31 Oct 2026
+  m = s.match(/^(\d{1,2})[\s-]+([A-Za-z]{3,4})[a-z]*[\s-]+(\d{2,4})/);      // 31 Oct 2026
   if (m && MONTHS[m[2].toLowerCase()]) {
     const y = m[3].length === 2 ? 2000 + +m[3] : +m[3];
     return `${y}-${pad(MONTHS[m[2].toLowerCase()])}-${pad(+m[1])}`;

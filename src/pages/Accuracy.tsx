@@ -12,6 +12,18 @@ interface HouseholdEval { id: string; name: string; format: string; txns: number
 interface Eval { runAt: string; mode: string; households: HouseholdEval[]; overall: { txns: number; streams: number; subscriptions: Score; bills: Score; flags: Score; exactPrice: { ok: number; total: number }; aiLabels: { ok: number; total: number } } }
 
 const M = main as unknown as Eval, R = rulesOnly as unknown as Eval;
+
+// Recorded on 4 Nov 2026: docs/evidence/09-real-bank-layouts-first-run.md and 10-real-bank-layouts-after-fixes.md.
+const BANK_LAYOUTS: [string, string, string, string][] = [
+  ['HSBC-style', 'No header row at all', '0 payments read', '39 read · PureGym, Netflix'],
+  ['Nationwide-style', 'Old Windows text: the £ sign is a different byte', '0 read: every amount rejected', '18 read · Spotify, Vodafone'],
+  ['Amex credit card', 'Charges are positive, the repayment is negative', 'Wrong: the repayment listed as a subscription, the 3 real ones missed', 'Adobe, Audible, Netflix · repayment ignored'],
+  ['Revolut', 'Declined and reverted payments are in the file', 'Wrong: 2 false "charged twice" flags', 'Declined ones left out · no false flags'],
+  ['NatWest/RBS', 'Excel apostrophes on text, "Value" column', 'Right', 'Right'],
+  ['Santander text file', 'Not a CSV: Date:/Description:/Amount: blocks', '0 read', '12 read · NOW, Octopus Energy'],
+  ['Semicolons', 'Semicolons instead of commas', '0 read', '12 read · Deezer, Apple'],
+  ['One month only', 'Too short for anything to repeat', 'Would say "Nothing looks off"', 'Says it only covers 26 days and asks for 3 to 12 months'],
+];
 const pct = (n?: number) => `${n ?? 0}%`;
 
 function Kpis({ e }: { e: Eval }) {
@@ -113,6 +125,22 @@ export function Accuracy() {
         ) : <p className="muted">A second blind set, written after these fixes by another agent that can't see the code, is being scored.</p>}
       </div>
       {blind2 && <><div className="prose" style={{ maxWidth: 760, padding: 0 }}><h3>Set 2, first run, per household</h3></div><div className="prose" style={{ maxWidth: 1100, padding: 0 }}><Table e={blind2} /></div></>}
+
+      <div className="prose" style={{ maxWidth: 760, paddingTop: 8 }}>
+        <h2>Real bank layouts</h2>
+        <p>Before anyone uploaded their own statement, I made test files in the awkward layouts real UK banks export, and ran them through the reader exactly as the browser read files at the time. It got 1 of 8 right. Real people would have hit every one of these.</p>
+      </div>
+      <div className="prose" style={{ maxWidth: 1100, padding: 0 }}>
+        <table>
+          <thead><tr><th>Layout</th><th>What's awkward about it</th><th>First run</th><th>After the fix</th></tr></thead>
+          <tbody>
+            {BANK_LAYOUTS.map(([name, why, before, after]) => <tr key={name}><td>{name}</td><td className="secondary" style={{ whiteSpace: 'normal' }}>{why}</td><td style={{ whiteSpace: 'normal' }}>{before}</td><td style={{ whiteSpace: 'normal' }}>{after}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+      <div className="prose" style={{ maxWidth: 760, paddingTop: 0 }}>
+        <p>Also fixed: a PDF or Excel file now gets told how to get the CSV, and a one-month file gets "too short to judge" instead of "Nothing looks off". Not blind: I wrote these files and the fixes, so this proves the layouts are handled, not that every bank's export matches them exactly. Evidence: <code>docs/evidence/09</code> and <code>10</code>.</p>
+      </div>
       <p className="muted" style={{ fontSize: 13, marginTop: 24 }}>Last scored {new Date(M.runAt).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })}</p>
     </div>
   );

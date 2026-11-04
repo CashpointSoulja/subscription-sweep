@@ -1,32 +1,26 @@
 import { FileUp, Lock } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
-/** Reads the file with FileReader in the browser. Nothing is uploaded anywhere. */
-export function Upload({ onFile, compact = false }: { onFile: (name: string, text: string) => void; compact?: boolean }) {
+export type OnFiles = (files: File[], mode?: 'replace' | 'add') => void;
+
+/** The drop zone. Files are read in the browser; nothing is uploaded anywhere.
+ *  Dropping is handled for the whole window (see DropOverlay), so this only offers the picker. */
+export function Upload({ onFiles, compact = false, mode = 'replace' }: { onFiles: OnFiles; compact?: boolean; mode?: 'replace' | 'add' }) {
   const input = useRef<HTMLInputElement>(null);
-  const [over, setOver] = useState(false);
-  const [error, setError] = useState('');
-  const read = (f: File | undefined) => {
-    if (!f) return;
-    if (f.size > 20 * 1024 * 1024) { setError('That file is over 20MB. Export a shorter date range.'); return; }
-    if (!/\.(csv|txt)$/i.test(f.name) && f.type && !/csv|text/.test(f.type)) { setError('Export your statement as CSV. Most banking apps have it under Statements or Export.'); return; }
-    setError('');
-    f.text().then(t => onFile(f.name, t));
+  const pick = (list: FileList | null) => {
+    const files = list ? [...list] : [];
+    // Reset so picking the same file again still counts as a change.
+    if (input.current) input.current.value = '';
+    if (files.length) onFiles(files, mode);
   };
   return (
-    <div
-      className={`drop${over ? ' over' : ''}`}
-      onDragOver={e => { e.preventDefault(); setOver(true); }}
-      onDragLeave={() => setOver(false)}
-      onDrop={e => { e.preventDefault(); setOver(false); read(e.dataTransfer.files[0]); }}
-    >
-      <FileUp size={20} strokeWidth={1.5} className="muted" aria-hidden />
-      {!compact && <p><b>Drop a bank statement CSV here</b></p>}
-      <button className="btn btn-secondary btn-sm" onClick={() => input.current?.click()}>Choose a file</button>
-      <input ref={input} type="file" accept=".csv,text/csv,.txt" hidden onChange={e => read(e.target.files?.[0])} data-testid="file-input" />
-      <p className="muted" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><Lock size={14} strokeWidth={1.5} aria-hidden /> Read on this device. Never uploaded</p>
-      <div className="formats">Monzo · Starling · Barclays · Nationwide · HSBC · any Date, Description, Amount file</div>
-      {error && <p className="warn" role="alert">{error}</p>}
+    <div className={`drop${compact ? ' compact' : ''}`}>
+      <span className="drop-icon"><FileUp size={20} strokeWidth={1.5} aria-hidden /></span>
+      {!compact && <p className="drop-title"><b>Drop a bank statement here</b><span>or several: current account and credit card</span></p>}
+      <button type="button" className="btn btn-secondary btn-sm" onClick={() => input.current?.click()}>Choose {compact ? 'files' : 'a file'}</button>
+      <input ref={input} type="file" multiple accept=".csv,.txt,.tsv,.ofx,.qif,text/csv,text/plain" hidden onChange={e => pick(e.target.files)} data-testid="file-input" />
+      <p className="muted lock"><Lock size={14} strokeWidth={1.5} aria-hidden /> Read on this device. Never uploaded</p>
+      {!compact && <div className="formats">CSV from Monzo · Starling · Barclays · Lloyds · HSBC · NatWest · Nationwide · Revolut · Amex · Santander text · OFX · QIF</div>}
     </div>
   );
 }

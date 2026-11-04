@@ -15,7 +15,7 @@ export function How() {
         <p className="secondary" style={{ fontSize: 18, lineHeight: '28px', maxWidth: '40rem' }}>Five steps. Four are plain rules. One uses AI, for the one job rules are bad at: knowing that "ROBLOX CORPORATION" is a game and "SQ *THE BREAD CLUB" is a bakery subscription.</p>
       </div>
       <div className="pipeline">
-        <div className="step"><span className="n">1 · rules</span><b>Read the file</b><span>Finds the date, description and amount columns in any bank's export. Day-first dates, £ signs, split in/out columns</span></div>
+        <div className="step"><span className="n">1 · rules</span><b>Read the file</b><span>Finds the date, description and amount columns in any bank's export, even with no header row. Old Windows text, semicolons, credit-card signs, Santander's text file, OFX and QIF</span></div>
         <div className="step ai"><span className="n">2 · dictionary, then AI</span><b>Name the merchant</b><span>~110 rules cover the big names. Anything left goes to the AI, as text only</span></div>
         <div className="step"><span className="n">3 · rules</span><b>Find repeats</b><span>Groups by merchant and price, then checks the gaps: weekly, monthly, quarterly, yearly, allowing skipped cycles</span></div>
         <div className="step"><span className="n">4 · rules</span><b>Prices and dates</b><span>Current price, price changes, next charge, yearly cost, still active or stopped</span></div>
@@ -47,11 +47,14 @@ export function How() {
           <thead><tr><th>Part</th><th>In this prototype</th><th>At Nous, I'd expect</th></tr></thead>
           <tbody>
             <tr><td>Reading the statement</td><td>In the browser tab</td><td>Open Banking feed, no file at all</td></tr>
-            <tr><td>Rules</td><td>In the browser, about a second for 12 months</td><td>Same code, server-side, on each new transaction</td></tr>
+            <tr><td>Rules</td><td>In a background thread in the browser: milliseconds for 12 months, under 2 seconds for 400,000 payments</td><td>Same code, server-side, on each new transaction</td></tr>
             <tr><td>AI naming</td><td>Offline script, cached to a JSON file</td><td>Cached per merchant across all members: one label serves every household that pays that merchant</td></tr>
             <tr><td>The message</td><td>Mock WhatsApp bubble</td><td>Nora, with a human-readable reason and a one-tap "cancel this"</td></tr>
           </tbody>
         </table>
+
+        <h2>How "never uploaded" is enforced</h2>
+        <p>Not just a promise in the copy. The site is served with a security policy (<code>connect-src 'none'</code>) that tells the browser to refuse every request this page tries to send, to any server, ours included. Fonts are served from the site itself, and there are no analytics or trackers. To check it yourself, open your browser's developer tools on the Network tab and drop a file in: nothing goes out.</p>
       </div>
     </div>
   );
