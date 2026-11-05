@@ -254,6 +254,20 @@ const browser = await chromium.launch({ executablePath: CHROME, headless: true }
   }
   await ctx.close();
 }
+// Found by the random-use test on the live site (5 Nov): long links in a doc widened a narrow window by 63px.
+// A phone-emulating browser zooms out to fit wide content, which hides this, so it's checked in a plain 360px window.
+{
+  const ctx = await browser.newContext({ ...auth, viewport: { width: 360, height: 740 } });
+  const page = await ctx.newPage();
+  watch(page, 'narrow');
+  for (const d of ['memo', 'PRD', 'build-log', 'gtm']) {
+    await page.goto(base + '#/docs/' + d, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(500);
+    const o = await overflow(page);
+    check('phone', `/docs/${d} in a 360px window: no sideways scroll`, o <= 0, o > 0 ? `${o}px` : '');
+  }
+  await ctx.close();
+}
 
 // ── E. reduced motion ──
 {

@@ -325,3 +325,9 @@ The web sign-up ends by sending you to WhatsApp. It's the last step because Nora
 *The last step of sign-up: tap START, and from then on Nora talks to you in this chat.*
 
 **For the sweep:** this is the chat its result would arrive in. That's why the sweep's output is one Nora message, not a dashboard.
+
+## 21. Going live (5 Nov)
+
+Before publishing: 54 unit tests, then the full browser QA on a local copy of the production build (89/89, including a 100,000-payment file: done in 1.4 s, with no freeze), then the same QA against the live site (89/89).
+
+Then the random-use test found one more bug, on the live site. On a narrow screen, two long links in the go-to-market doc's sources widened the page by 63px. My phone checks had missed it because they imitate a phone browser, which zooms out to fit wide content. The fix lets long links wrap, and the QA now opens every doc in a plain 360px window too: 93/93.

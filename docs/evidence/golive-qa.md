@@ -1,6 +1,6 @@
 # Browser QA run (golive)
 
-Run 2026-11-05T09:11:07.459Z against http://127.0.0.1:5289/ · **89/89 checks passed**
+Run 2026-11-05T10:14:08.347Z against http://127.0.0.1:5289/ · **93/93 checks passed**
 
 | Area | Check | Result | Detail |
 |---|---|---|---|
@@ -47,23 +47,23 @@ Run 2026-11-05T09:11:07.459Z against http://127.0.0.1:5289/ · **89/89 checks pa
 | interactions | Deep link #/how shows the right page and tab title | pass | How it works · Subscription Sweep |
 | interactions | Deep link #/docs/PRD shows the right page and tab title | pass | PRD · Subscription Sweep |
 | interactions | First Tab press focuses "Skip to content" | pass |  |
-| uploads | 01-empty.csv: says the file is empty, never "nothing looks off" | pass | 1785 ms, reading animation shown |
-| uploads | 02-not-a-statement.csv: explains which columns it needs | pass | 1415 ms, reading animation shown |
-| uploads | 03-barclays.csv: Barclays: Spotify and Netflix | pass | 1420 ms, reading animation shown |
-| uploads | 04-lloyds.csv: Lloyds: Disney+, EE as a bill | pass | 2308 ms, reading animation shown |
-| uploads | 05-messy-quotes-bom.csv: messy file: YouTube Premium, mortgage, 2 rows skipped | pass | 1443 ms, reading animation shown |
-| uploads | 06-only-income.csv: income only: calm "nothing looks off" | pass | 1438 ms, reading animation shown |
-| uploads | 07-five-years.csv: five years: Netflix price rise | pass | 1427 ms, reading animation shown |
-| uploads | 08-hsbc-no-header.csv: HSBC, no header row: PureGym and Netflix | pass | 1427 ms, reading animation shown |
-| uploads | 09-nationwide-windows-encoding.csv: Nationwide old encoding: Spotify, Vodafone | pass | 1420 ms, reading animation shown |
-| uploads | 10-amex-credit-card.csv: Amex: charges read as money out, repayment ignored | pass | 1435 ms, reading animation shown |
-| uploads | 11-revolut.csv: Revolut: declined payments left out | pass | 1446 ms, reading animation shown |
-| uploads | 12-natwest.csv: NatWest: Sky and Amazon Prime | pass | 1414 ms, reading animation shown |
-| uploads | 13-santander.txt: Santander text file: NOW and Octopus | pass | 1423 ms, reading animation shown |
-| uploads | 14-one-month.csv: one month: "too short" warning, not "nothing looks off" | pass | 1430 ms, reading animation shown |
-| uploads | 15-semicolons.csv: semicolons: Deezer | pass | 1421 ms, reading animation shown |
-| uploads | 16-statement.pdf: PDF: says how to get the CSV | pass | 1428 ms, reading animation shown |
-| uploads | 17-statement.xlsx: Excel: says to save as CSV | pass | 1426 ms, reading animation shown |
+| uploads | 01-empty.csv: says the file is empty, never "nothing looks off" | pass | 1457 ms, reading animation shown |
+| uploads | 02-not-a-statement.csv: explains which columns it needs | pass | 1433 ms, reading animation shown |
+| uploads | 03-barclays.csv: Barclays: Spotify and Netflix | pass | 1424 ms, reading animation shown |
+| uploads | 04-lloyds.csv: Lloyds: Disney+, EE as a bill | pass | 1414 ms, reading animation shown |
+| uploads | 05-messy-quotes-bom.csv: messy file: YouTube Premium, mortgage, 2 rows skipped | pass | 1416 ms, reading animation shown |
+| uploads | 06-only-income.csv: income only: calm "nothing looks off" | pass | 1415 ms, reading animation shown |
+| uploads | 07-five-years.csv: five years: Netflix price rise | pass | 1416 ms, reading animation shown |
+| uploads | 08-hsbc-no-header.csv: HSBC, no header row: PureGym and Netflix | pass | 1414 ms, reading animation shown |
+| uploads | 09-nationwide-windows-encoding.csv: Nationwide old encoding: Spotify, Vodafone | pass | 1412 ms, reading animation shown |
+| uploads | 10-amex-credit-card.csv: Amex: charges read as money out, repayment ignored | pass | 1417 ms, reading animation shown |
+| uploads | 11-revolut.csv: Revolut: declined payments left out | pass | 1481 ms, reading animation shown |
+| uploads | 12-natwest.csv: NatWest: Sky and Amazon Prime | pass | 1431 ms, reading animation shown |
+| uploads | 13-santander.txt: Santander text file: NOW and Octopus | pass | 1414 ms, reading animation shown |
+| uploads | 14-one-month.csv: one month: "too short" warning, not "nothing looks off" | pass | 1416 ms, reading animation shown |
+| uploads | 15-semicolons.csv: semicolons: Deezer | pass | 1416 ms, reading animation shown |
+| uploads | 16-statement.pdf: PDF: says how to get the CSV | pass | 1417 ms, reading animation shown |
+| uploads | 17-statement.xlsx: Excel: says to save as CSV | pass | 1592 ms, reading animation shown |
 | uploads | Two files at once (current account + credit card) are merged | pass |  |
 | uploads | The same file twice counts each payment once (no fake "charged twice") | pass |  |
 | uploads | "Add another file" adds to what is already there | pass |  |
@@ -84,6 +84,10 @@ Run 2026-11-05T09:11:07.459Z against http://127.0.0.1:5289/ · **89/89 checks pa
 | phone | /accuracy: no sideways scroll | pass |  |
 | phone | /docs/build-log: no sideways scroll | pass |  |
 | phone | /sweep/yours: no sideways scroll | pass |  |
+| phone | /docs/memo in a 360px window: no sideways scroll | pass |  |
+| phone | /docs/PRD in a 360px window: no sideways scroll | pass |  |
+| phone | /docs/build-log in a 360px window: no sideways scroll | pass |  |
+| phone | /docs/gtm in a 360px window: no sideways scroll | pass |  |
 | reduced motion | Less-motion setting: message and numbers appear at once, no animation | pass | {"bubbles":3,"shown":3,"value":"£263"} |
 | reduced motion | Less-motion setting: upload result appears without the wait | pass |  |
 | accessibility | /: no serious or critical issues | pass |  |
