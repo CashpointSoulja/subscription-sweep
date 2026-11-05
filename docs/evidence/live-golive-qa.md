@@ -1,10 +1,10 @@
 # Browser QA run (live-golive)
 
-Run 2026-11-05T10:07:36.544Z against https://subscription-sweep.vercel.app/ · **89/89 checks passed**
+Run 2026-11-05T10:52:51.039Z against https://subscription-sweep.vercel.app/ · **93/93 checks passed**
 
 | Area | Check | Result | Detail |
 |---|---|---|---|
-| stability | Layout shift while the page loads (CLS) | pass | 0.0004 |
+| stability | Layout shift while the page loads (CLS) | pass | 0.0001 |
 | stability | → The Okafors: household bar didn't move (during and after) | pass | [152,68,301.3,42] |
 | stability | → The Okafors: nav, title position, page width and scroll unchanged | pass | title y 150→150, width 1440→1440, scroll 0→0 |
 | stability | → The Okafors: nothing moved later than 0.7 s after the click | pass | 0 late shifts |
@@ -47,29 +47,29 @@ Run 2026-11-05T10:07:36.544Z against https://subscription-sweep.vercel.app/ · *
 | interactions | Deep link #/how shows the right page and tab title | pass | How it works · Subscription Sweep |
 | interactions | Deep link #/docs/PRD shows the right page and tab title | pass | PRD · Subscription Sweep |
 | interactions | First Tab press focuses "Skip to content" | pass |  |
-| uploads | 01-empty.csv: says the file is empty, never "nothing looks off" | pass | 1427 ms, reading animation shown |
-| uploads | 02-not-a-statement.csv: explains which columns it needs | pass | 1428 ms, reading animation shown |
-| uploads | 03-barclays.csv: Barclays: Spotify and Netflix | pass | 1424 ms, reading animation shown |
-| uploads | 04-lloyds.csv: Lloyds: Disney+, EE as a bill | pass | 1413 ms, reading animation shown |
-| uploads | 05-messy-quotes-bom.csv: messy file: YouTube Premium, mortgage, 2 rows skipped | pass | 1415 ms, reading animation shown |
+| uploads | 01-empty.csv: says the file is empty, never "nothing looks off" | pass | 1425 ms, reading animation shown |
+| uploads | 02-not-a-statement.csv: explains which columns it needs | pass | 1411 ms, reading animation shown |
+| uploads | 03-barclays.csv: Barclays: Spotify and Netflix | pass | 1413 ms, reading animation shown |
+| uploads | 04-lloyds.csv: Lloyds: Disney+, EE as a bill | pass | 1414 ms, reading animation shown |
+| uploads | 05-messy-quotes-bom.csv: messy file: YouTube Premium, mortgage, 2 rows skipped | pass | 1414 ms, reading animation shown |
 | uploads | 06-only-income.csv: income only: calm "nothing looks off" | pass | 1413 ms, reading animation shown |
-| uploads | 07-five-years.csv: five years: Netflix price rise | pass | 1419 ms, reading animation shown |
-| uploads | 08-hsbc-no-header.csv: HSBC, no header row: PureGym and Netflix | pass | 1429 ms, reading animation shown |
-| uploads | 09-nationwide-windows-encoding.csv: Nationwide old encoding: Spotify, Vodafone | pass | 1420 ms, reading animation shown |
-| uploads | 10-amex-credit-card.csv: Amex: charges read as money out, repayment ignored | pass | 1414 ms, reading animation shown |
-| uploads | 11-revolut.csv: Revolut: declined payments left out | pass | 1520 ms, reading animation shown |
-| uploads | 12-natwest.csv: NatWest: Sky and Amazon Prime | pass | 1453 ms, reading animation shown |
+| uploads | 07-five-years.csv: five years: Netflix price rise | pass | 1417 ms, reading animation shown |
+| uploads | 08-hsbc-no-header.csv: HSBC, no header row: PureGym and Netflix | pass | 1414 ms, reading animation shown |
+| uploads | 09-nationwide-windows-encoding.csv: Nationwide old encoding: Spotify, Vodafone | pass | 1416 ms, reading animation shown |
+| uploads | 10-amex-credit-card.csv: Amex: charges read as money out, repayment ignored | pass | 1459 ms, reading animation shown |
+| uploads | 11-revolut.csv: Revolut: declined payments left out | pass | 1433 ms, reading animation shown |
+| uploads | 12-natwest.csv: NatWest: Sky and Amazon Prime | pass | 1421 ms, reading animation shown |
 | uploads | 13-santander.txt: Santander text file: NOW and Octopus | pass | 1415 ms, reading animation shown |
 | uploads | 14-one-month.csv: one month: "too short" warning, not "nothing looks off" | pass | 1414 ms, reading animation shown |
-| uploads | 15-semicolons.csv: semicolons: Deezer | pass | 1415 ms, reading animation shown |
-| uploads | 16-statement.pdf: PDF: says how to get the CSV | pass | 1414 ms, reading animation shown |
-| uploads | 17-statement.xlsx: Excel: says to save as CSV | pass | 1457 ms, reading animation shown |
+| uploads | 15-semicolons.csv: semicolons: Deezer | pass | 1414 ms, reading animation shown |
+| uploads | 16-statement.pdf: PDF: says how to get the CSV | pass | 1416 ms, reading animation shown |
+| uploads | 17-statement.xlsx: Excel: says to save as CSV | pass | 1412 ms, reading animation shown |
 | uploads | Two files at once (current account + credit card) are merged | pass |  |
 | uploads | The same file twice counts each payment once (no fake "charged twice") | pass |  |
 | uploads | "Add another file" adds to what is already there | pass |  |
 | uploads | "Start over" clears everything | pass |  |
 | uploads | Picking the same file again after starting over still works | pass |  |
-| uploads | 100,000-payment file: finishes, and the page never freezes for long | pass | 1444 ms total, longest freeze 0 ms |
+| uploads | 100,000-payment file: finishes, and the page never freezes for long | pass | 1420 ms total, longest freeze 0 ms |
 | uploads | A file over 25MB gets a clear message | pass |  |
 | uploads | Drag a file anywhere on the home page: overlay shows, drop sweeps it | pass |  |
 | phone | → The Okafors: bar fixed, nothing moved late, no sideways scroll | pass |  |
@@ -84,6 +84,10 @@ Run 2026-11-05T10:07:36.544Z against https://subscription-sweep.vercel.app/ · *
 | phone | /accuracy: no sideways scroll | pass |  |
 | phone | /docs/build-log: no sideways scroll | pass |  |
 | phone | /sweep/yours: no sideways scroll | pass |  |
+| phone | /docs/memo in a 360px window: no sideways scroll | pass |  |
+| phone | /docs/PRD in a 360px window: no sideways scroll | pass |  |
+| phone | /docs/build-log in a 360px window: no sideways scroll | pass |  |
+| phone | /docs/gtm in a 360px window: no sideways scroll | pass |  |
 | reduced motion | Less-motion setting: message and numbers appear at once, no animation | pass | {"bubbles":3,"shown":3,"value":"£263"} |
 | reduced motion | Less-motion setting: upload result appears without the wait | pass |  |
 | accessibility | /: no serious or critical issues | pass |  |
