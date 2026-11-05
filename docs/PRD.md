@@ -1,6 +1,6 @@
 # Subscription Sweep: PRD
 
-**Owner:** Ayo Ahmed · **Status:** working prototype · **Written:** 3 Nov 2026 · **Surface:** Nous subscriptions (Open Banking)
+**Owner:** Ayo Ahmed · **Status:** working prototype · **Written:** 3 Nov 2026 · **Updated:** 5 Nov 2026 · **Surface:** Nous subscriptions (Open Banking)
 
 > Built as proof of work for Nous's Product Builder role. Everything here runs; nothing here is Nous data. Sample households are made up. Ad and review numbers are from public sources, linked below.
 
@@ -23,6 +23,7 @@ From Nous's side:
 
 - **The subscriptions surface is invisible.** Premium includes "subscription tracking", but members only ever mention switching (energy in 144 reviews, mobile in 44). When reviewers say "subscription", they mean Nous's own £6.99 plan.
 - **Acquisition sells one thing.** Of 1,268 Nous ads in Meta's Ad Library, 41% open with energy and the rest with general "you're overpaying on bills". None open with subscriptions. So members arrive for energy, and the second reason to stay isn't obvious to them.
+- **Not even at sign-up.** I signed up as a member on 5 Nov. The savings estimate covers energy, broadband, mobile and car insurance. There's no subscriptions line.
 
 ## Evidence
 
@@ -34,8 +35,29 @@ From Nous's side:
 | Same, 155 reviews at 1–3★ | 43% are bad money judgement ("it was 30% MORE"); 31% describe a switch they didn't clearly approve | Show the maths in monthly terms. Never act on silence |
 | Same | All 5 reviews about connecting a bank or email are negative ("invasive") | Explain why the data is needed; start from what the member chose to share |
 | Same, 322 reviews at 4–5★ | 54% praise "done for me", 45% saving money; WhatsApp praised by name | Keep it one explained message in chat, with one-tap actions |
+| Nous sign-up, done as a member (5 Nov) | No subscriptions line in the savings estimate; Nous shows its working; consent is the default; it ends in WhatsApp | Below |
 
 Sources: [Nous ads in Meta's Ad Library](https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=GB&view_all_page_id=104181918671731&search_type=page&media_type=all) (pulled 28 Oct 2026; ad text saved up to 90 characters, so only opening lines are claimed), [Nous on Trustpilot](https://www.trustpilot.com/review/nous.co) (pulled 3 Nov 2026; full method in `research/reviews/findings.md`).
+
+### What a member sees at sign-up
+
+I went through the whole Nous sign-up on 5 Nov. Four things shape this product:
+
+**The savings estimate has no subscriptions line.** It covers energy, broadband, mobile and car insurance. That list is where the sweep's figure would go.
+
+![The savings estimate at sign-up](../public/shots/member-01-savings-estimate.png)
+*The estimate a new member sees, before Nous even asks their name.*
+
+**Nous already shows its working.** The energy figure comes with "What this is based on", and every line can be edited. The sweep's flag cards follow the same pattern.
+
+**Consent is the default.** The default mode recommends switches before it changes anything. The sweep asks for a yes per item.
+
+**It ends in WhatsApp.** The last step is tapping START on a message from Nous, because that's where Nora works. The sweep's result is a message in that chat.
+
+![Confirming the number on WhatsApp](../public/shots/member-04-whatsapp-start.png)
+*The last step of sign-up. From here on, Nora talks to the member in this chat.*
+
+The full walkthrough, step by step with screenshots, is in the build log (section 20).
 
 ## Who it's for
 
@@ -43,7 +65,7 @@ A Nous member with a connected bank account and 6+ months of history. In practic
 
 ## What it does (v1)
 
-1. Reads the member's transactions. In the prototype that's a CSV from any UK bank; at Nous it's the Open Banking feed.
+1. Reads the member's transactions. At Nous that's the Open Banking feed. In the prototype it's a file the member chooses: CSV from the main UK banks (including HSBC's with no header row, Nationwide's old Windows encoding, Revolut, Amex and other credit cards), Santander's text download, OFX or QIF. Several files can go in at once, and a payment that's in two files counts once. A PDF or spreadsheet is recognised and the member is told how to get the CSV.
 2. Names each merchant: a dictionary of ~110 rules first, then AI for what's left.
 3. Finds payments that repeat weekly, monthly, quarterly or yearly, allowing skipped cycles. Food shops, coffee, transport and money to people are left out on purpose.
 4. Works out the current price, any price change, the next charge date, the yearly cost, and whether it's still active.
@@ -92,11 +114,11 @@ Design choices, each from the research:
 - **Monthly first.** "I'm only interested in my monthly outgoings" (1★ review). Every flag leads with £ per month; yearly is secondary.
 - **Max three items.** It has to read on a phone. The rest live in the full sweep.
 - **Explicit yes, per item.** 31% of low reviews are about acting without clear consent. Cancelling is harder to undo than a tariff switch, so the bar is higher.
-- **Show the basis.** Every £ says how it was worked out ("the increase only", "cost of the cheaper one").
+- **Show the basis.** Every £ says how it was worked out ("the increase only", "cost of the cheaper one"). In the full sweep, tapping a flag shows the payments behind it, with the bank's own text.
 
 ## Growth angle
 
-This isn't only a retention feature.
+This isn't only a retention feature. The full plan, with channels, experiments and the numbers behind them, is in the go-to-market doc.
 
 1. **A new ad hook.** Every Nous ad sells energy. "I found £506 a year in subscriptions I forgot about" is a creator video waiting to be made, and Nous already knows how to test a hook in a week.
 2. **A second reason to stay.** Members acquired on energy get value in month one that isn't a switch. That's also the clearest reason to upgrade to Premium, which already lists subscription tracking.
@@ -123,7 +145,11 @@ An eval: a fixed answer key scored after every change (`npm run eval`).
 - **Blind test:** two more households written by a separate agent that never saw the code, with about 40 traps. **First run: 80% of subscriptions found (28/35, 4 false alarms), 81% of bills, and 10 of 21 flags.** Every price it found was exact (47/47). It exposed real bugs (an asterisk in "UBER *ONE", quarterly price rises, seasonal energy bills, part-month first payments, transfers that looked like subscriptions) and one gap in the AI's job: yearly plans from merchants the dictionary doesn't know. After fixing them: 35/35, 21/21, 20/21. That second number isn't blind, so a second agent wrote a fresh blind set after the fixes. **Its first run: 84% of subscriptions found, 73% of flags, every price exact (42/42), but more false alarms** (loans, cards, Klarna, cash and a 20p FX fee counted as subscriptions; Santander's "…RATE 1.35/GBP" made Perplexity look like a BP petrol station). Fixed; after that 25/25, 22/22, 14/15. Re-labelling also showed the AI can change its mind between runs, so labels are now stable: a refresh never replaces a confident label with an unsure one. See the [Accuracy page](#/accuracy).
 - **Edge cases:** a recorded browser test uploads seven awkward files (empty, not a statement, Barclays, Lloyds, a messy file, income only, five years). It found two bugs a member would hit: no way to upload a second file, and an unreadable file showing "nothing looks off". Both fixed.
 - **AI on/off:** with AI labels off, flag precision drops from 100% to 77.8%: 4 false "can't name this one" flags on things a person would know instantly (Roblox, Patreon, Crunchyroll, a bakery subscription). Detection doesn't change. The rules find the repeats; the AI makes them readable.
-- **Unit tests:** 35, covering bank formats, day-first dates, LEON vs E.ON, Tesco Mobile vs Tesco, refunds vs double charges, trials, renewals and no double counting.
+- **Real bank layouts:** 8 awkward exports (HSBC with no header row, Nationwide's old encoding, Amex, Revolut with declined payments, NatWest, Santander's text file, semicolons, one month only). First run: 1 of 8 read correctly. Now 8 of 8. Not blind: I wrote these files and the fixes.
+- **Browser QA:** 89 checks in a real browser: nothing on screen moves when you click, 17 upload cases, phone size, reduced motion, accessibility. 89/89, on my machine and on the Vercel test copy with the live security rules.
+- **Random use:** 300 random clicks, scrolls, resizes, uploads and back/forward per run. 6 runs clean. It found 3 bugs no scripted test caught.
+- **Speed:** 400,000 payments in 1.5 seconds (was 19), read in a background thread so the page never freezes.
+- **Unit tests:** 54, covering every bank layout above, day-first dates, LEON vs E.ON, Tesco Mobile vs Tesco, refunds vs double charges, trials, renewals and no double counting.
 
 ## Not in v1
 
@@ -140,7 +166,7 @@ An eval: a fixed answer key scored after every change (`npm run eval`).
 | Wrong £ figure | Rules own every number; AI never writes one. Eval checks exact price on every labelled payment |
 | Apple/Google bundle several products under one name | Split by price, say "probably Apple Music", and say where to check |
 | Mislabelled merchant | Confidence threshold; "unnamed" fallback; per-merchant cache that a human can fix once for everyone |
-| Feels invasive | Explain what's read and why, in the message itself. Prototype runs fully on-device |
+| Feels invasive | Explain what's read and why, in the message itself. The prototype runs fully on-device, and the site tells the browser to block any request the page tries to send, so a statement can't leave the device |
 
 ## If I joined: first 30 days
 

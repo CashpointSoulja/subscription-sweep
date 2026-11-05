@@ -5,7 +5,7 @@ import base64, json, os, re, subprocess, sys, tempfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DRY = '--dry-run' in sys.argv
-DOCS = [('memo', 'One-page memo'), ('PRD', 'PRD'), ('build-log', 'Build log')]
+DOCS = [('memo', 'One-page memo'), ('PRD', 'PRD'), ('build-log', 'Build log'), ('gtm', 'Go-to-market')]
 ALREADY_FILLED = set(a.split('=', 1)[1] for a in sys.argv if a.startswith('--skip='))
 NOTION_FREE_LIMIT = 5 * 1024 * 1024
 

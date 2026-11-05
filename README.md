@@ -53,6 +53,7 @@ Results, including what it got wrong, are on the Accuracy page and in `docs/evid
 - `docs/memo.md`: one-page memo
 - `docs/PRD.md`: product requirements
 - `docs/build-log.md`: how it was built, with screenshots
+- `docs/gtm.md`: go-to-market, how Nous would get members using it
 - `research/reviews/findings.md`: 477 Trustpilot reviews, analysed
 
 ## Structure
@@ -64,5 +65,5 @@ src/components/  Statement, Phone, FlagCard, SpendChart, Upload, Segmented, Swee
 src/motion.tsx   reduced-motion check, rolling numbers, reveal on scroll
 src/sweep.worker.ts, sweepJob.ts, sweepFiles.ts   reading uploads in a background thread
 src/data/        sample households, answer keys, AI label cache, eval results
-scripts/         generate-households, label-merchants, eval, make-fixtures, qa, monkey, edge-cases, screenshots, evidence-shots, walkthrough
+scripts/         generate-households, label-merchants, eval, make-fixtures, qa, monkey, edge-cases, screenshots, evidence-shots, walkthrough, gtm-charts (the go-to-market charts)
 ```

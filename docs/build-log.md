@@ -1,6 +1,6 @@
 # Build log
 
-How Subscription Sweep went from a job ad to a working product in one session on 3 Nov 2026. Written as I went, with screenshots and the actual test output. Times are London.
+How Subscription Sweep went from a job ad to a working product: built in one session on 3 Nov 2026, made production-ready on 4 Nov, and checked against the real Nous sign-up on 5 Nov. Written as I went, with screenshots and the actual test output. Times are London.
 
 ---
 
@@ -16,7 +16,7 @@ First I looked at how a new member joins. Sign-up is a web app, not an app-store
 *nous.co, captured 3 Nov 2026*
 
 ![Nous sign-up, step one](../public/shots/research-02-nous-signup.png)
-*The first sign-up screen: "Where do you live?" I stopped here. The next step needs my real address, so I'll finish it myself.*
+*The first sign-up screen: "Where do you live?" On day one I stopped here, because the next step needs my real address. I finished the whole sign-up on 5 Nov (section 20).*
 
 ## 3. Listening to members (18:51 → 19:15)
 
@@ -101,9 +101,9 @@ Other things the screenshots caught: two margin notes overlapping in the hero, a
 
 A recorded browser session uploads seven files into the real app and checks what a member would see: an empty file, a file that isn't a statement, Barclays and Lloyds exports, a messy file (BOM, Windows line endings, commas inside quotes, £ signs, a bad row), an income-only file, and five years of data for speed.
 
-<video src="videos/edge-cases.mp4" controls width="100%"></video>
+<video src="videos/edge-cases.mp4" poster="shots/edge-cases-poster.jpg" preload="none" controls width="100%"></video>
 
-*The latest run: 7/7 pass, no page errors.*
+*The seven files dropped into the real app (re-recorded on the current version, 5 Nov). The green highlighter marks what to look at, and each caption says what happened and why it matters. Sound on.*
 
 It took three runs:
 
@@ -276,3 +276,52 @@ How I tested it:
 | Unit tests | 35 | 54, including every new bank layout |
 
 The random-use test found three bugs no scripted test caught. Shrink the window from laptop to phone size and the page scrolled sideways by up to 242px: the nav's sliding highlight went invisible when its link was hidden on phones, but stayed parked at its laptop position, past the edge of the screen. On a phone, a long file name made the upload report wider than the screen. And after I made the docs load on demand, clicking Docs showed a near-empty page for a moment; they now load quietly once the first page is idle. All three fixed, and the first two now have a permanent check.
+
+## 20. Signing up to Nous as a member (5 Nov)
+
+I'd built a feature for a product I'd only seen the first screen of. So I went through the whole sign-up as a new member would, to see where a subscriptions sweep would fit. It has four parts, in this order:
+
+| Part | What it asks | What it means for the sweep |
+|---|---|---|
+| 1. Your home | Address, who lives with you, vehicles | A drop-off on step one (below) |
+| 2. What you could save | A savings estimate, your providers, four energy questions | No subscriptions line: this is where the sweep's figure would go |
+| 3. What Nous may do for you | Name, contact details, password, a savings mode | The same consent rule as the sweep's message |
+| 4. Hand-over to WhatsApp | Tap START on a message from Nous | The chat the sweep's result would arrive in |
+
+### 1. Your home
+
+Postcode, pick your address, then who lives with you and whether you have a car. The address list stops at 19 addresses per postcode (I checked 5 postcodes), and my own house wasn't in it. "My address isn't listed" worked. Not the sweep's job, but anyone at the end of a long street hits it on the very first step.
+
+### 2. What you could save
+
+Before it asks for your name, Nous shows what it thinks it can save you.
+
+![The savings estimate at sign-up](../public/shots/member-01-savings-estimate.png)
+*The estimate at sign-up: energy, broadband, mobile and car insurance.*
+
+There's no line for subscriptions. The gap I found in the ads and reviews (sections 1 and 3) is on the product's own first screen too. **For the sweep:** this list is the natural home for its figure, "Subscriptions: £X a year worth a look".
+
+Then four energy questions: fuel type, any tariff change this year, how long you've been with your supplier, and home size. The energy figure moved from £212 to £333 a year, and Nous lists what that's based on.
+
+![What the energy figure is based on](../public/shots/member-02-shows-working.png)
+*The working behind the energy figure. Every line can be edited.*
+
+**For the sweep:** Nous already shows its working for energy. The sweep's flag cards do the same for subscriptions (tap one to see the payments behind it), so members would recognise the pattern.
+
+### 3. What Nous may do for you
+
+Name, email, phone and a password, then a savings mode: do it all myself, do most of it for me, or do all of it.
+
+![Choosing a savings mode](../public/shots/member-03-savings-mode.png)
+*Balanced is the default: "I share recommendations for switches before I make any changes."*
+
+**For the sweep:** it's the same rule as its message, a yes per item and nothing on silence. Cancelling is harder to undo than a tariff switch, so I'd keep that bar even for members on Freedom mode.
+
+### 4. Hand-over to WhatsApp
+
+The web sign-up ends by sending you to WhatsApp. It's the last step because Nora works there: until you tap START, she can't message you.
+
+![Confirming my number on WhatsApp](../public/shots/member-04-whatsapp-start.png)
+*The last step of sign-up: tap START, and from then on Nora talks to you in this chat.*
+
+**For the sweep:** this is the chat its result would arrive in. That's why the sweep's output is one Nora message, not a dashboard.

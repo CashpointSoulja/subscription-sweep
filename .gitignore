@@ -10,3 +10,5 @@ research/reviews/analysis/
 # local tooling
 .vercel/
 .vercel
+# private: raw go-to-market teardown (review text, names)
+research/gtm/
